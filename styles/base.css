@@ -75,6 +75,9 @@ main h2 {
   margin: 1em 1em;
 }
 
+.card li {
+  list-style-type: none;
+}
 .card li p {
   margin: .5em 0;
 }
