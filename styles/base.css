@@ -5,12 +5,18 @@ body {
 
 header {
   background: lightblue;
-  padding: 5rem;
+  padding: 1rem;
 }
+
+header img {
+  background-color: black;
+}
+
 nav {
-  background-color: darkblue;
-  padding: 25px 50px;
+  background-color: blue; 
   display: flex;
+  flex-direction: column-reverse;
+  align-items: center ;
   justify-content: right;
   gap: 3rm;
 }
@@ -29,5 +35,8 @@ a img {
   width: 80px;
 }
 #profile {
-    width: 80px;
+  width: 80px;
+}
+.material-icons.md-light { 
+  color: rgba(255, 255, 255, 1); 
 }
