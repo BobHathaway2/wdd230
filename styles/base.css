@@ -1,17 +1,6 @@
 body {
-  display: grid;
   height: 100vh;
 }
-
-header {
-  background: lightblue;
-  padding: 1rem;
-}
-
-header img {
-  background-color: black;
-}
-
 nav {
   background-color: blue; 
   display: flex;
@@ -19,24 +8,99 @@ nav {
   align-items: center ;
   justify-content: right;
   gap: 3rm;
+  height: 7em;
+}
+.material-icons.md-light { 
+  color: rgba(255, 255, 255, 1); 
+}
+
+a img {
+  width: 80px;
+}
+
+header {
+  background: lightblue;
+  padding-left: 1%;
+  height: 5em;
+}
+
+#profile {
+  background-color: white;
+  float: left;
+  margin-right: 1.5em;
+  height: 5em;
+  border-radius: 19px;
+  box-shadow: 0 0 10px black;
+}
+
+header h1 {
+  margin: 0;
+  text-align: left;
+  padding-top: 1rem;
+  font-family: 'Tangerine', serif;
+  font-weight: bolder;
+  font-size: 3rem;
 }
 
 main {
   background: white;
-  padding: 1rem;
+  margin: 1em;
+}
+
+main h2 {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.card {
+  display:  block;
+  border: 2px;
+  border-radius: 19px;
+  box-shadow: 0 0 10px black;
+  margin: 1em;
+}
+
+.card h3 {
+  text-align: center;
+  background-color: lightblue;
+  border-radius: 20px 20px 0 0;
+  margin: 0;
+}
+
+.card ul {
+  padding: 0 1em;
+}
+
+.card p {
+  margin: 1em 1em;
+}
+
+.card li p {
+  margin: .5em 0;
+}
+
+  .card a {
+    margin: 1em;
+    padding: 0;
+    border: 1em;
+  }
+
+.card li p a {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block: 0;
 }
 
 footer {
   background: lightblue;
-  padding: 2rem;
   text-align: center;
+  padding: 1em;
+  margin: auto;
+  height: 5em;
 }
-a img {
-  width: 80px;
-}
-#profile {
-  width: 80px;
-}
-.material-icons.md-light { 
-  color: rgba(255, 255, 255, 1); 
+
+
+.highlight {
+  color: yellow;
 }
