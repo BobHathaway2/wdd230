@@ -4,13 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="WDD 230, Bob Hathaway, course assignment portal">
+    <meta name="author" content="Bob Hathaway">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <!-- <link rel="media stylesheet" href="styles/larger.css"> -->
+    <title>WDD 230 - Portal - Bob Hathaway</title>
 </head>
 <body>
-    <h1>Bob Hathaway's Home Page</h1>
-    <section>Assignments
-        <div><a href="week01/holygrail.html">Week 1 Holy Grail</a></div>    
-        <div><a href="https://codepen.io/rlhathaway/pen/NWBrLer">Week 1 CodePen Applied JavaScript Activity</a></div>
-    </section>
+    <nav>   
+        <a class="icon" href="https://www.linkedin.com/in/robert-hathaway/" target="_blank">
+            <img src="images/LI-Logo.png" alt="Linked In icon">
+        </a>
+        <a class="icon" href="https://byui.edu" target="_blank">
+            <img src="images/byui.png" alt="BYU-I icon">
+        </a>
+        <span class="material-icons">menu</span>
+    </nav>
+    <header>
+        <img id="profile" src="images/me.png" alt="profile photo">
+        <h1>Bob Hathaway</h1>
+    </header>
+
+    <main>
+        <h2>WDD 230: Activity Portal</h2>
+        <section class="card">
+            <h3>Learning Activities</h3>
+            <ul>
+                <li type="none">
+                    <p>Week 1: <a href="week01/holygrail.html">Holy Grail</a> | <a href="week01/media-query.html">Media Query</a> | <a href="https://codepen.io/rlhathaway/pen/NWBrLer">Pen</a></p>
+                </li>
+            </ul>
+        </section>
+        <section class="card" id="project">
+            <h3>Project</h3>
+            <a href="">Links to future Chamber Project</a>
+        </section>
+        <section class="card" id="information">
+            <h3>Information</h3>
+            <p>Temperature</p>
+            <p>Visit Count</p>
+        </section>
+    </main>
+    <footer>
+        <p>©2023 Bob Hathaway USA</p>
+        <p class="highlight" id="lastModified">Last Modification:</p>
+    </footer>
+    <script src="scripts/getDates.js"></script>
 </body>
 </html>

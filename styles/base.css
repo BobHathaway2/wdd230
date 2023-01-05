@@ -1,0 +1,33 @@
+body {
+  display: grid;
+  height: 100vh;
+}
+
+header {
+  background: lightblue;
+  padding: 5rem;
+}
+nav {
+  background-color: darkblue;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: right;
+  gap: 3rm;
+}
+
+main {
+  background: white;
+  padding: 1rem;
+}
+
+footer {
+  background: lightblue;
+  padding: 2rem;
+  text-align: center;
+}
+a img {
+  width: 80px;
+}
+#profile {
+    width: 80px;
+}
