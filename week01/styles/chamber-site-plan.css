@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Open+Sans:wght@300&display=swap');
+
+:root {
+  --primary-color: #03045e;
+  --secondary-color: #0077b6;
+  --accent1-color: #00b4d8;
+  --accent2-color: #ffffff;
+
+  --heading-font: "Kavoon";
+  --paragraph-font: "Open Sans", Helvetica, sans-serif;
+
+  --headline-color-on-white: #0077b6;
+  --headline-color-on-color: #ffffff;
+  --paragraph-color-on-white: #03045e;
+  --paragraph-color-on-color: #ffffff;
+  --paragraph-background-color: #0077b6  ;
+  --nav-link-color: #00b4d8;
+  --nav-background-color: #03045e;
+  --nav-hover-link-color: #ffffff;
+  --nav-hover-background-color: #00b4d8;
+}
+
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  text-align: center;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+h2 {
+  text-align: center;
+}
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--paragraph-color-on-color);
+  background-color: var(--paragraph-background-color);
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color);
+  padding: 1em;
+}
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #999;
+}
+.colors td{
+  width: 25%;
+  height: 3em;
+}
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2{
+  background-color: var(--accent2-color);
+}
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+ol.nobullets {
+    list-style:none;
+}
