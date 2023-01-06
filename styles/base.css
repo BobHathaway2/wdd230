@@ -96,7 +96,8 @@ ul.noBullets {
 }
 
 footer {
-  background: lightblue;
+  background: darkblue;
+  color: white;
   text-align: center;
   padding: 1em;
   margin: auto;
