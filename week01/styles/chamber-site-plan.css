@@ -75,12 +75,15 @@ p {
 }
 .primary {
   background-color: var(--primary-color);
+  color: var(--headline-color-on-color);
 }
 .secondary {
   background-color: var(--secondary-color);
+  color: var(--headline-color-on-color);
 }
 .accent1 {
-  background-color: var(--accent1-color);
+    color: var(--headline-color-on-color);
+    background-color: var(--accent1-color);
 }
 .accent2{
   background-color: var(--accent2-color);
