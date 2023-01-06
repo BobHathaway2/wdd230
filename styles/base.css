@@ -7,7 +7,6 @@ nav {
   flex-direction: column-reverse;
   align-items: center ;
   justify-content: right;
-  gap: 3rem;
   height: 7em;
 }
 .material-icons.md-light { 
@@ -96,7 +95,7 @@ ul.noBullets {
 }
 
 footer {
-  background: darkblue;
+  background: blue;
   color: white;
   text-align: center;
   padding: 1em;
