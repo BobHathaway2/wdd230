@@ -9,6 +9,19 @@ nav {
   justify-content: right;
   height: 7em;
 }
+
+nav a {
+  color: white;
+}
+
+.menuItem {
+  padding: 1rem;
+}
+
+.material-icons.md-light {
+  font-size: larger;
+}
+
 .material-icons.md-light { 
   color: rgba(255, 255, 255, 1); 
 }
