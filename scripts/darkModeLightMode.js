@@ -5,6 +5,7 @@ const mainDiv = document.querySelector(".mainDiv");
 const card = document.querySelectorAll(".card");
 const p = document.querySelectorAll(".modeClass");
 const a = document.querySelectorAll("a");
+const menuItem = document.querySelectorAll(".menuItem");
 const dark = 'images/darkmode.png';
 const light = 'images/lightmode.png';
 const altDark = 'dark mode icon';
@@ -37,6 +38,9 @@ modeButton.addEventListener("click", () => {
         })
         a.forEach((anch) => {
             anch.style.color = "-webkit-link";
+        })
+        menuItem.forEach((anch) => {
+            anch.style.color = "white";
         })
         p.forEach((ele) => {
             ele.style.color = "black";
