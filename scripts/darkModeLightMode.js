@@ -23,6 +23,9 @@ modeButton.addEventListener("click", () => {
         a.forEach((anch) => {
             anch.style.color = "white";
         })
+        menuItem.forEach((anch) => {
+            anch.style.color = "white";
+        })
         p.forEach((ele) => {
             ele.style.color = "white";
         })
