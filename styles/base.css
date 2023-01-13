@@ -7,7 +7,7 @@ nav {
   flex-direction: column-reverse;
   align-items: center ;
   justify-content: right;
-  height: 8em;
+  height: 9em;
 }
 
 nav a {
@@ -16,7 +16,7 @@ nav a {
 }
 
 #darkLightMode {
-  height: 20px;  
+  height: 40px;  
 }
 
 .material-icons.md-light{
@@ -119,5 +119,5 @@ footer {
 
 
 .highlight {
-  color: rgb(255, 234, 0);
+  color: white;
 }
