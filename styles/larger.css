@@ -6,8 +6,13 @@
     nav img {
         padding: 1em;
     }
-    .material-icons.md-light { 
+    a img {
+        width: 80px;
+    }
+    .material-icons.md-light{
+        font-size: 2.5rem ;
         padding: 1em;
+        color: white;
       }
     .mainDiv {
         display: grid;

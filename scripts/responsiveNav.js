@@ -1,14 +1,12 @@
+// const menuItems = document.querySelectorAll('.menu-item');
 const hamburgerMenu = document.querySelector('span');
-const menuItems = document.querySelector('section');
+const section = document.querySelector('section');
 
 hamburgerMenu.addEventListener('click', () => {
-    if (menuItems.style.display === 'none') {
-        menuItems.style.display = 'inline';
-        hamburgerMenu.textContent = 'X';
-        } else 
-        if (menuItems.style.display = 'inline') {
-        menuItems.style.display = 'none';
-        hamburgerMenu.textContent = '≡';
+    if (section.style.display === 'none') {
+        section.style.display = 'inline';
+    } else {
+        section.style.display = 'none';
     }
 })
-menuItems.style.display = 'none';
+section.style.display = 'none';

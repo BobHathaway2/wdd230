@@ -7,28 +7,28 @@ nav {
   flex-direction: column-reverse;
   align-items: center ;
   justify-content: right;
-  height: 7em;
+  height: 8em;
 }
 
 nav a {
   color: white;
-  padding: 1em;
+  padding: 0 1rem;
 }
 
-.menuItem {
-  padding: 1rem;
+#darkLightMode {
+  height: 20px;  
 }
 
-.material-icons.md-light {
-  font-size: larger;
+.material-icons.md-light{
+  font-size: 1.5rem ;
+  padding: 0px;
+  color: white;
 }
 
-.material-icons.md-light { 
-  color: rgba(255, 255, 255, 1); 
-}
 
 a img {
-  width: 80px;
+  width: 40px;
+  padding: 3px;
 }
 
 header {
