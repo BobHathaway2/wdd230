@@ -1,0 +1,49 @@
+body {
+  height: 100vh;
+}
+nav {
+  background-color: blue; 
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center ;
+  justify-content: right;
+  height: 6em;
+}
+
+nav a {
+  color: white;
+  padding: 0 1rem;
+}
+
+#darkLightMode {
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.material-icons.md-light{
+  font-size: 1.5rem ;
+  padding: 0px;
+  color: white;
+}
+
+
+header {
+  background: lightblue;
+  padding-left: 1%;
+
+}
+
+
+main {
+  background: white;
+  margin: 1em;
+}
+
+footer {
+  background: blue;
+  color: white;
+  text-align: center;
+  margin: auto;
+}

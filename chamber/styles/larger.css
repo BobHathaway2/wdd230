@@ -1,0 +1,17 @@
+@media only screen and (min-width: 650px) {
+    nav {
+        display:flex;
+        flex-direction: row;
+    }
+    nav img {
+        padding: 1em;
+    }
+    a img {
+        width: 80px;
+    }
+    .material-icons.md-light{
+        font-size: 2.5rem ;
+        padding: 1em;
+        color: white;
+      }
+}
