@@ -1,3 +1,6 @@
+body {
+	background-color: #00b4d8;
+}
 header {
   display: grid;
   grid-template-columns: 4rem auto 2.5rem;
@@ -37,10 +40,10 @@ header h3 {
 	background-color: #03045e;
 	color: #00b4d8;	
 }
-button::before {
+header button::before {
 	content: "\2630"
 }
-button.open::before {
+header button.open::before {
 	content: "\2715"
 }
 nav {
@@ -61,10 +64,16 @@ nav li {
 }
 nav a {
 	display: block;
-	padding: .75rem 1rem;
+	padding: .5rem 1rem;
 	color: white;
 }
-#hero-img {
+#hero {
+	text-align: center;
+}
+#hero-box img {
     max-width: 100%;
     height: auto;
+}
+#hero h3, h4 {
+	margin: 0;
 }
