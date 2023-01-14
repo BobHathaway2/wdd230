@@ -354,3 +354,4 @@ MigrationBackup/
 .gitignore
 package-lock.json
 package.json
+.DS_Store

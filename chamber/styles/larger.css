@@ -1,17 +1,15 @@
-@media only screen and (min-width: 650px) {
-    nav {
-        display:flex;
-        flex-direction: row;
-    }
-    nav img {
-        padding: 1em;
-    }
-    a img {
-        width: 80px;
-    }
-    .material-icons.md-light{
-        font-size: 2.5rem ;
-        padding: 1em;
-        color: white;
-      }
+@media only screen and (min-width: 38rem) {
+	header {grid-template-columns: 4rem auto auto;
+		;}
+	header button {display: none;}
+	nav {
+		position: initial;
+		display: block;
+		grid-template-columns: 1/3;
+		grid-template-rows: 3/4;
+	}
+	nav ul {
+		display: flex;
+		justify-content: center;
+	}
 }

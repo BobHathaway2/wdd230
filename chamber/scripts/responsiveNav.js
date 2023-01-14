@@ -1,17 +1,8 @@
-const hamburgerMenu = document.querySelector('span');
-const section = document.querySelector('section');
+const mybtn = document.querySelector('header button')
+const mynav = document.querySelector('nav')
+console.log(mynav)
 
-hamburgerMenu.addEventListener('click', () => {
-    if (section.style.display === 'none') {
-        section.style.display = 'inline';
-        hamburgerMenu.innerText = 'X';
-    } else {
-        section.style.display = 'none';
-        hamburgerMenu.class='close-menu';
-        hamburgerMenu.class='material-icons md-light';
-        hamburgerMenu.innerText = 'menu'
-    }
-})
-hamburgerMenu.class='material-icons md-light';
-hamburgerMenu.innerText = 'menu'
-section.style.display = 'none';
+mybtn.addEventListener('click', () => {
+    mynav.classList.toggle('open')
+    mybtn.classList.toggle('open')
+});
