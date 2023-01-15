@@ -1,6 +1,8 @@
 body {
 	background-color: #00b4d8;
 }
+/* --------------------- header --------------------- */
+
 header {
   display: grid;
   grid-template-columns: 4rem auto 2.5rem;
@@ -67,18 +69,51 @@ nav a {
 	padding: .5rem 1rem;
 	color: white;
 }
+/* --------------------- hero --------------------- */
+
 #hero {
 	text-align: center;
 }
 #hero-box img {
     max-width: 100%;
     height: auto;
+	box-shadow: 0 0 10px black;
+	
 }
 #hero h3, h4 {
 	margin: 0;
 }
+#hero button {
+	box-shadow: 0 0 10px black;
+}
+
+/* --------------------- main --------------------- */
+main {
+	background-color: white;
+	padding-top: 2px;
+}
+h2 {
+	text-align: center;
+}
+.card {
+	display:  block;
+	border: 2px;
+	border-radius: 19px;
+	box-shadow: 0 0 10px black;
+	margin: 1em;
+}
+.card h3 {
+	text-align: center;
+	background-color: lightblue;
+	border-radius: 20px 20px 0 0;
+	margin: 0;
+}
+.card h4, p {
+	padding: .5em;
+}
+/* --------------------- footer --------------------- */
 footer {
-	height: 8rem;
+	height: 9rem;
 	background-color: #03045e; 
 	color: white;
 	display: grid;
