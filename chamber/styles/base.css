@@ -83,10 +83,11 @@ nav a {
 #hero h3, h4 {
 	margin: 0;
 }
-#hero button {
+.join {
 	box-shadow: 0 0 10px black;
+	border-radius: 5px;
+	background-color: white;
 }
-
 /* --------------------- main --------------------- */
 main {
 	background-color: white;
