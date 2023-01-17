@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+}
+
+picture {
+    display: flex;
+    justify-content: center;
+}
+
+.myImage {
+    height: 600px;
+    width: 400px;
+    box-shadow: 0 0 10px black;
+	border-radius: 5px;
+	background-color: white;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+}
