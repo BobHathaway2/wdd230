@@ -38,9 +38,5 @@
     .card a {
         margin-top: 1em;
     }
-    iframe {
-        display: block;
-        margin: auto;
-        padding: 10px;
-    }
+
 }

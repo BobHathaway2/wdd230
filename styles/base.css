@@ -35,8 +35,8 @@ nav a {
 
 .herolabel {
 	position: absolute;
-	top: 200px;
-	left: 25px;
+	top: 20%;
+	left: 3%;
 	background: radial-gradient(white, lightblue);
 	border: 1px solid black;
 	padding: .75rem;
@@ -50,6 +50,7 @@ nav a {
 	font-weight: 900;
 	font-size: 1.8rem;
   font-family: 'Tangerine', serif;
+  font-size: 4vw;
 }
 
 a img {
@@ -150,3 +151,9 @@ footer {
   color: white;
 }
 
+iframe {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  width: 80%;
+}
