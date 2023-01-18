@@ -28,9 +28,33 @@ nav a {
   color: white;
 }
 
+.hero {
+    width: 100%;
+    height: auto;
+}
+
+.herolabel {
+	position: absolute;
+	top: 200px;
+	left: 25px;
+	background: radial-gradient(white, lightblue);
+	border: 1px solid black;
+	padding: .75rem;
+	box-shadow: 0 0 2rem white;
+	opacity: 0.75;
+}
+
+.herolabel p {
+	margin: 0;
+	padding: .25rem;
+	font-weight: 900;
+	font-size: 1.8rem;
+  font-family: 'Tangerine', serif;
+}
 
 a img {
   width: 40px;
+  height: auto;
   padding: 3px;
 }
 
@@ -60,8 +84,7 @@ header h1 {
 
 main {
   background: white;
-  margin: 1em;
-}
+  }
 
 main h2 {
   font-weight: normal;
@@ -98,17 +121,21 @@ ul.noBullets {
   margin: .5em 0;
 }
 
-  .card a {
-    margin: 1em;
-    padding: 0;
-    border: 1em;
-  }
+.card a {
+  margin: 1em;
+  padding: 0;
+  border: 1em;
+}
 
 .card li p a {
   margin: 0;
   padding: 0;
   margin-block-start: 0;
   margin-block: 0;
+}
+
+#map {
+  display: block;
 }
 
 footer {
@@ -122,3 +149,4 @@ footer {
 .highlight {
   color: white;
 }
+

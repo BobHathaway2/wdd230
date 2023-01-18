@@ -6,8 +6,8 @@ const card = document.querySelectorAll(".card");
 const p = document.querySelectorAll(".modeClass");
 const a = document.querySelectorAll("a");
 const menuItem = document.querySelectorAll(".menuItem");
-const dark = 'images/darkmode.png';
-const light = 'images/lightmode.png';
+const dark = 'images/darkmode.webp';
+const light = 'images/lightmode.webp';
 const altDark = 'dark mode icon';
 const altLight = 'light mode icon';
 
