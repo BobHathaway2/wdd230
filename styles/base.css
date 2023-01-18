@@ -37,19 +37,19 @@ nav a {
 
 .herolabel {
 	position: absolute;
-	top: 20%;
-	left: 3%;
+	top: 190px;
+	left: 14px;
 	background: radial-gradient(white, lightblue);
 	border: 1px solid black;
-	padding: .75rem;
+	padding: 4px;
 	box-shadow: 0 0 2rem white;
 	opacity: 0.75;
 }
 
 .herolabel p {
 	margin: 0;
-	padding: .25rem;
-	font-weight: 900;
+  padding-right: 4px;
+  font-weight: 900;
 	font-size: 1.8rem;
   font-family: 'Tangerine', serif;
   font-size: 4vw;
