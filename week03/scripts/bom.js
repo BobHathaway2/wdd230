@@ -19,9 +19,14 @@ function addScripture (scripture) {
     list.appendChild(listItem);
 
     deleteBtn.addEventListener('click', () => {
+        let scripture2delete = listText.textContent;
+        let scriptures = JSON.parse(localStorage.getItem("scriptures"));
+        scriptures.indexOf(scripture2delete)
+        scriptures = scriptures.filter(function(value){ 
+            return value != scripture2delete});
+        localStorage.setItem("scriptures", JSON.stringify(scriptures));    
         list.removeChild(listItem);
         input.focus();
-        //remove from local storage
     })
 
 
