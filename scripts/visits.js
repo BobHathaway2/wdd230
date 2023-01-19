@@ -1,5 +1,5 @@
 const visitsElement = document.querySelector(".visits");
 let visitCount = Number(window.localStorage.getItem("visit-count"));
-	visitsElement.textContent = `Visit Count: ${visitCount}`;
 visitCount++;
+visitsElement.textContent = `Visit Count: ${visitCount}`;
 localStorage.setItem("visit-count", visitCount);
