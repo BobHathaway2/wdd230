@@ -43,6 +43,7 @@ if (scriptures != null) {
 
 
 button.addEventListener('click', function() {
+    let scriptures = [];
     let myItem = input.value;
     if (myItem != '') {
         input.value = '';
