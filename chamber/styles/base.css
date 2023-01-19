@@ -1,5 +1,12 @@
+html {
+	display: table;
+	margin: auto;
+}
 body {
+	display: table-cell;
+	vertical-align: middle;
 	background-color: #00b4d8;
+	max-width: 960px;
 }
 /* --------------------- header --------------------- */
 
@@ -46,7 +53,8 @@ header button::before {
 	content: "\2630"
 }
 header button.open::before {
-	content: "\2715"
+	content: "\2715";
+	color: "red";
 }
 nav {
 	display: none;
@@ -60,7 +68,10 @@ nav.open {
 nav ul {
 	margin: 0;
 	padding: 0;
-}
+	background: radial-gradient(black, lightblue);
+	/* border: 1px solid black; */
+	box-shadow: 0 0 2rem white;
+	opacity: 0.75;}
 nav li {
 	list-style: none;
 }
