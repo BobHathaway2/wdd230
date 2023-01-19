@@ -1,4 +1,4 @@
-const modeButton = document.querySelector("#darkLightMode");
+const modeButton = document.querySelector(".light");
 const main = document.querySelector("main");
 const body = document.querySelector("body");
 const mainDiv = document.querySelector(".mainDiv");

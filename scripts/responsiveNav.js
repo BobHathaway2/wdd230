@@ -1,17 +1,10 @@
-const hamburgerMenu = document.querySelector('span');
+const mybtn = document.querySelector('nav button')
+const mynav = document.querySelector('nav')
 const section = document.querySelector('section');
 
-hamburgerMenu.addEventListener('click', () => {
-    if (section.style.display === 'none') {
-        section.style.display = 'inline';
-        hamburgerMenu.innerText = 'X';
-    } else {
-        section.style.display = 'none';
-        hamburgerMenu.class='close-menu';
-        hamburgerMenu.class='material-icons md-light';
-        hamburgerMenu.innerText = 'menu'
-    }
-})
-hamburgerMenu.class='material-icons md-light';
-hamburgerMenu.innerText = 'menu'
-section.style.display = 'none';
+
+mybtn.addEventListener('click', () => {
+    mynav.classList.toggle('open')
+    mybtn.classList.toggle('open')
+    section.classList.toggle('open')
+});
