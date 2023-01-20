@@ -1,4 +1,4 @@
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 650px) {
 	header {grid-template-columns: 4rem auto auto;
 		;}
 	header button {display: none;}
@@ -42,4 +42,21 @@
         grid-row: 2 / 3;
         margin: .5em  .5em	 0 .5em;
     }
+}
+
+/* ====================================== discover page ====================================== */
+.discover-div {
+    display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+#discover-sidebar {
+	grid-column: 1 / 2;
+  }
+
+div#tooele-photos {
+    grid-column: 2/3;
+}
+img.tooele-photo {
+    width: 100%;
+    height: auto;
 }
