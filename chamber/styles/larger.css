@@ -1,4 +1,4 @@
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 650px) {
 	header {grid-template-columns: 4rem auto auto;
 		;}
 	header button {display: none;}
