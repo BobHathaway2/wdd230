@@ -21,8 +21,8 @@
 <body>
     <header> 
         <img src="images/tccat.webp" alt="tooele county chamber and tourism logo">
-        <h1>Tooele County</h1>
-        <h2>Chamber and Tourism</h2>
+        <h1 id="test1">Tooele County</h1>
+        <h2 id="test2">Chamber and Tourism</h2>
         <button></button>
         <nav>
             <ul>
@@ -40,7 +40,7 @@
                 <source media="(max-width: 400px)" srcset="images/tooele-400.webp">
                 <source media="(max-width: 960px)" srcset="images/tooele-960.webp">
                 <source media="(max-width: 1400px)" srcset="images/tooele-1400.webp">
-                <img id="hero-img" src="images/tooele.webp" alt="lanscape view of Tooele County from Stansbury Island across Great Salt Lake"  loading="lazy" width="1400" height="381">
+                <img id="hero-img" src="images/tooele.webp" alt="lanscape view of Tooele County from Stansbury Island across Great Salt Lake"  loading="lazy" width="4023" height="1191">
             </picture>
         </div>
         <div>
@@ -57,31 +57,44 @@
         <div class="discover-div">
             <div id="discover-sidebar">
                 <h3>Demographics</h3>
-                <p>Population: 76,640</p>
-                <p>Largest City: Tooele
-                    <br>
-                    (population: 36,000)
-                </p>
-                <p>Average Age: 31.6</p>
-                <p>Size: 6,941 mi&#178; <br>    (17,977 k&#178;)</p>
-                <p>(Source: <a href="https://www.census.gov/quickfacts/tooelecountyutah" target="_blank">US Census Bureau</a>)</p>
+                    <p>Population: 76,640</p>
+                    <p>Largest City: Tooele
+                        <br>
+                        (population: 36,000)
+                    </p>
+                    <p>Average Age: 31.6</p>
+                    <p>Size: 6,941 mi&#178; <br>    (17,977 k&#178;)</p>
+                    <p>(Source: <a href="https://www.census.gov/quickfacts/tooelecountyutah" target="_blank">US Census Bureau</a>)</p>
+                <h3>Economy</h3>
+                <p>In civilian labor force, 16 years+, 2017-2021: 71.2%</p>
+                <p>Total accomodation and food services sales, 2017: $62,882,000</p>
+                <p>Total health care and social assistance receipts/revenue, 2017: $141,210,000</p>
+                <p>Total retail sales, 2017: $546,516,000</p>
+                <p>Total retail sales per capita, 2017: $8,098</p>
+
+                <h3>Businesses</h3>
+                    <p>Total establisments: 995</p>
+                    <p>Total employment: 11,795</p>
+                    <p>Total annual payroll: $458,271,000</p>
+                    <p>Total employment change, 2019-2020: 0.8%</p>
+                    <p>Total nonemployer establishments, 2019: 3,730</p>
                 <h3>Events</h3>
-                <h4>2023 Utah Housing Forecast</h4>
-                <p>
-                    Tuesday, January 24, 2023
-                    Tooele Chamber of Commerce
-                    154 South Main Street
-                    Tooele, Utah 84074
-                </p>
-                <h4>Installation Banquet & Awards Ceremony</h4>
-                <p>
-                    Friday, January 27, 2023<br>
-                    Tooele High School<br>
-                    301 West Vine Street<br>
-                    Tooele, Utah 84074
-                    Social: 6:30 PM<br>
-                    Dinner & Awards: 7:00 PM
-                </p>
+                    <h4>2023 Utah Housing Forecast</h4>
+                        <p>
+                            Tuesday, January 24, 2023
+                            Tooele Chamber of Commerce
+                            154 South Main Street
+                            Tooele, Utah 84074
+                        </p>
+                    <h4>Installation Banquet & Awards Ceremony</h4>
+                        <p>
+                            Friday, January 27, 2023<br>
+                            Tooele High School<br>
+                            301 West Vine Street<br>
+                            Tooele, Utah 84074
+                            Social: 6:30 PM<br>
+                            Dinner & Awards: 7:00 PM
+                        </p>
                 <h3 id="lastAccessed"></h3>
                 <p>
                     <iframe width="240" height="420" src="//www.census.gov/quickfacts/widget_240x420.php/?qfembed=5xndsfjb3" frameBorder="0" allowtransparency="true"></iframe>
@@ -89,6 +102,20 @@
             </div>
             <div id="tooele-photos">
                 <h3>Views of the County</h3>
+                <picture>
+                    <source media="(max-width: 400px)" srcset="images/mainstreetnorthbound-400.webp">
+                    <source media="(max-width: 960px)" srcset="images/mainstreetnorthbound-960.webp">
+                    <source media="(max-width: 1400px)" srcset="images/mainstreetnorthbound-1400.webp">
+                    <img class="main-photos" src="images/mainstreetnorthbound.webp" alt="picture of about 30 mule deer in a meadow at the base of the Oquirrh Mountains, some grazing, others looking toward the camera"  loading="lazy" width="3036" height="1331">
+                </picture>
+                <p>Tooele City, Main & Vine Facing North</p>
+                <picture>
+                    <source media="(max-width: 400px)" srcset="images/mainstreetsouthbound-400.webp">
+                    <source media="(max-width: 960px)" srcset="images/mainstreetsouthbound-960.webp">
+                    <source media="(max-width: 1400px)" srcset="images/mainstreetsouthbound-1400.webp">
+                    <img class="main-photos" src="images/mainstreetsouthbound.webp" alt="picture of about 30 mule deer in a meadow at the base of the Oquirrh Mountains, some grazing, others looking toward the camera"  loading="lazy" width="3036" height="1331">
+                </picture>
+                <p>Tooele City, Main & Vine Facing South</p>
                 <picture>
                     <source media="(max-width: 400px)" srcset="images/wildlife-400.webp">
                     <source media="(max-width: 960px)" srcset="images/wildlife-960.webp">
@@ -134,5 +161,6 @@
 
     <script src="scripts/getDates.js"></script>
     <script src="scripts/responsiveNav.js"></script>
+    <script src="scripts/lastVisit.js"></script>
 </body>
 </html>
