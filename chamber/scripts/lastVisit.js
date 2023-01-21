@@ -1,60 +1,17 @@
-const list = document.querySelector('ul');
-
+const lastAccessedSpan= document.querySelector('#lastAccessed');
 let now = new Date();
 
-input.value = '';
-input.focus();
 
-function addScripture (scripture) {
-    const listItem = document.createElement('li');
-    const deleteBtn = document.createElement('button');
-    const listText = document.createElement('span');
-
-    listItem.appendChild(listText);
-    listText.textContent = scripture;
-    listItem.appendChild(deleteBtn);
-    deleteBtn.textContent = '❌';
-    deleteBtn.ariaLabel = `Remove ${scripture}`;
-    list.appendChild(listItem);
-
-    deleteBtn.addEventListener('click', () => {
-        let scripture2delete = listText.textContent;
-        let scriptures = JSON.parse(localStorage.getItem("scriptures"));
-        scriptures.indexOf(scripture2delete)
-        scriptures = scriptures.filter(function(value){ 
-            return value != scripture2delete});
-        localStorage.setItem("scriptures", JSON.stringify(scriptures));    
-        list.removeChild(listItem);
-        input.focus();
-    })
-
-
-}
-
-// if there is currently local storage for this app
-scriptures = JSON.parse(localStorage.getItem("scriptures"));
-if (scriptures != null) {
-    scriptures.forEach(element => {
-        //load any list items
-        addScripture(element);
-    })
-}
-
-
-button.addEventListener('click', function() {
-    let scriptures = [];
-    let myItem = input.value;
-    if (myItem != '') {
-        input.value = '';
-        addScripture(myItem);
-        let test = JSON.parse(localStorage.getItem("scriptures"));
-        if (test != null) {
-            scriptures = test;
-        }
-        scriptures.push(myItem);
-        localStorage.setItem("scriptures", JSON.stringify(scriptures));    
+lastAccessedDateString = localStorage.getItem('lastAccess');
+if (lastAccessedDateString != null) {
+    let lastAccessedDate = new Date(lastAccessedDateString);
+    daysSinceLastAccess = Math.floor((now.getTime() - lastAccessedDate.getTime()) / (1000 * 60 * 60 *24));
+    if (daysSinceLastAccess == 0) {
+        lastAccessedSpan.textContent = 'Your Last Access: Within last 24 hours'
     } else {
-        alert('Enter a scripture and then press the "Add Chapter" button');
+        lastAccessedSpan.textContent = `Your Last Access: ${daysSinceLastAccess} day(s) ago`;
     }
-    input.focus();
-})
+} else {
+    lastAccessedSpan.textContent = 'Your Last Access: This is your first access of this site! (or first since you cleared local storage!)'
+}
+localStorage.setItem('lastAccess', now);

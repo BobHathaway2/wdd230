@@ -2,7 +2,15 @@
 	header {
         grid-template-columns: 4rem 4fr 2fr;
 	}
-	header button {display: none;}
+	header button {
+        display: none;
+    }
+    header h1 {
+        font-size: 3.5vw;
+    }
+    header h2 {
+        font-size: 2vw;
+    }
 	nav {
 		position: initial;
 		display: block;
@@ -58,6 +66,7 @@
     }
     #discover-sidebar {
         grid-column: 1 / 2;
+        margin: 3px;
     }
 
     #tooele-photos div{
