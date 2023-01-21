@@ -1,7 +1,16 @@
-@media only screen and (min-width: 650px) {
-	header {grid-template-columns: 4rem auto auto;
-		;}
-	header button {display: none;}
+@media only screen and (min-width: 400px) {
+	header {
+        grid-template-columns: 4rem 4fr 2fr;
+	}
+	header button {
+        display: none;
+    }
+    header h1 {
+        font-size: 3.5vw;
+    }
+    header h2 {
+        font-size: 2vw;
+    }
 	nav {
 		position: initial;
 		display: block;
@@ -11,8 +20,14 @@
 	nav ul {
 		display: flex;
 		justify-content: center;
+        padding: 4px;
+        margin: 5px;
 	}
-	.mainDiv {
+    nav li a {
+        list-style: none;
+        padding: 4px;
+    }
+    .mainDiv {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
@@ -42,21 +57,25 @@
         grid-row: 2 / 3;
         margin: .5em  .5em	 0 .5em;
     }
-}
+
 
 /* ====================================== discover page ====================================== */
-.discover-div {
-    display: grid;
-	grid-template-columns: 1fr 3fr;
-}
-#discover-sidebar {
-	grid-column: 1 / 2;
-  }
+    .discover-div {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+    #discover-sidebar {
+        grid-column: 1 / 2;
+        margin: 3px;
+    }
 
-div#tooele-photos {
-    grid-column: 2/3;
-}
-img.tooele-photo {
-    width: 100%;
-    height: auto;
+    #tooele-photos div{
+        grid-column: 2/3;
+    }
+
+    #discover-sidebar p{
+        text-align: left;
+        margin-top: 0;
+        padding-top: 0;
+    }
 }
