@@ -195,8 +195,3 @@ img.tooele-photo {
 	text-align: center;
 }
 
-main img:hover {
-	transform: scale3d(1.5, 1.5, 1);
-	cursor: pointer;
-	transition: transform 1s;
-}

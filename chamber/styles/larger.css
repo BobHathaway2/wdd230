@@ -56,4 +56,9 @@
         margin-top: 0;
         padding-top: 0;
     }
+    main img:hover {
+        transform: scale3d(1.5, 1.5, 1);
+        cursor: pointer;
+        transition: transform 1s;
+    }
 }
