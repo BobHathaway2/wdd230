@@ -1,0 +1,50 @@
+:root {
+	--background: darkblue  ;
+    --background2: royalblue;
+    --fontdark: royalblue;
+	--fontlight: white;
+	--border: black;
+	--borderlight: grey;
+	--shadow: grey;
+	--zebra: lightgrey;
+}
+
+table {
+	margin: 10px auto;
+	border: thin solid var(--border);
+	box-shadow: 0 0 7px var(--shadow);
+	border-collapse: collapse;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+	color: var(--background);
+	font-size: .85rem;
+}
+
+tr:first-child th {
+	background-color: var(--background);
+	color: var(--fontlight);
+}
+tr:nth-child(2) > th:first-child {
+	background-color: var(--background);
+	border: thin solid var(--background);
+}
+th, td {
+	padding: 7px 15px;
+	border: 1px solid var(--bacground);
+}
+
+th {
+	background-color: var(--background2);
+	font-size: larger;
+}
+
+td {
+	text-align: center;
+}
+
+tbody tr:nth-child(even) {
+	background-color: var(--zebra);
+}
