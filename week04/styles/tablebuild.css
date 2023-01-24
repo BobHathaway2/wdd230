@@ -1,4 +1,5 @@
 :root {
+	--bord: 1px solid #777;
 	--background: darkblue  ;
     --background2: royalblue;
     --fontdark: royalblue;
@@ -22,18 +23,23 @@ caption {
 	color: var(--background);
 	font-size: .85rem;
 }
-
 tr:first-child th {
 	background-color: var(--background);
 	color: var(--fontlight);
+	border-left: var(--bord);
 }
+
+tr:nth-child(2) > th {
+	border: var(--bord);
+}
+
 tr:nth-child(2) > th:first-child {
 	background-color: var(--background);
 	border: thin solid var(--background);
 }
+
 th, td {
 	padding: 7px 15px;
-	border: 1px solid var(--bacground);
 }
 
 th {
@@ -43,6 +49,10 @@ th {
 
 td {
 	text-align: center;
+	border-left: var(--bord);
+}
+tr {
+	border: var(--bord);
 }
 
 tbody tr:nth-child(even) {
