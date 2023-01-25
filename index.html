@@ -24,10 +24,10 @@
             <img class="light dark" src="images/darkmode.webp" alt="dark mode icon" loading="lazy" width="40" height="40"> 
         </div>
         <a class="icon" href="https://www.linkedin.com/in/robert-hathaway/" target="_blank">
-            <img src="images/linkedin.webp" alt="Linked In icon"  loading="lazy" width="46" height="18.47">
+            <img src="images/linkedin.webp" alt="Linked In icon"  loading="lazy" width="46" height="18">
         </a>
         <a class="icon" href="https://www.byui.edu" target="_blank">
-            <img src="images/byui.webp" alt="BYU-I icon" loading="lazy" width="46" height="28.5">
+            <img src="images/byui.webp" alt="BYU-I icon" loading="lazy" width="46" height="28">
         </a>
         <section class="menuItems">
             <a href="#" class="menuItem">About</a>
@@ -59,23 +59,18 @@
                     <li>
                         <p class="turnWhiteInDarkMode">Week 1: <a href="week01/holygrail.html">Holy Grail</a> | <a href="week01/media-query.html">Media Query</a> | <a href="https://codepen.io/rlhathaway/pen/NWBrLer">Pen</a> | <a href="week01/chamber-site-plan.html">Site Plan</a></p>
                     </li>
-                    <hr>
                     <li>
                         <p class="turnWhiteInDarkMode">Week 2: <a href="week02/design.html">Design</a> | <a href="week02/bom.html">Book of Mormon</a></p>
                     </li>
-                    <hr>
                     <li>
                         <p class="turnWhiteInDarkMode">Week 3: <a href="week03/images/landscape.webp">WebP</a> | <a href="week03/lazyload.html">Lazy Load</a> | <a href="https://codepen.io/rlhathaway/pen/JjBrZwG">CodePen</a> | <a href="week03/bom.html">Book of Mormon</a> </p>
                     </li>
-                    <hr>
                     <li>
                         <p class="turnWhiteInDarkMode">Week 4: <a href="https://codepen.io/rlhathaway/pen/wvxyQBd">Pseudo Classes</a> | <a href="week04/images/combinators.webp">Combinator Screenshot</a> | <a href="week04/tablebuild.html">Table Build</a> | <a href="week04/forms/index.html">Form Build</a></p>
                     </li>
-                    <hr>
                     <li>
                         <p class="turnWhiteInDarkMode">Week 5: </p>
                     </li>
-                    <hr>
                     <li>
                         <p class="turnWhiteInDarkMode">Week 6: </p>
                     </li>
@@ -92,10 +87,32 @@
             </section>
             <section class="card" id="map">
                 <h3>Tooele Map</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24260.18573246046!2d-112.32534809935979!3d40.53002831999421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752a6083e8433bb%3A0xba03bffbc79018b0!2sTooele%2C%20UT%2084074!5e0!3m2!1sen!2sus!4v1674025979447!5m2!1sen!2sus" width="300" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </section>            
+                <div id="mapcontainer">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24260.18573246046!2d-112.32534809935979!3d40.53002831999421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752a6083e8433bb%3A0xba03bffbc79018b0!2sTooele%2C%20UT%2084074!5e0!3m2!1sen!2sus!4v1674025979447!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                </section>            
             <section class="card" id="contact">
-                <h3>Contact Us</h3>
+                <h3>Contact Form</h3>
+                <form method='get' action="thanks.html">
+                    <fieldset>
+                        <legend>Share Your Info?</legend>
+                        <label class="top">Your Full Name*<input type="text" name="fname" placeholder="John Smith" required></label>
+                        <label class="top">Your Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                        <label class="top">Password*<input type="password" name="password1" placeholder="A word or phrase" required></label>
+                        <label class="top">Verify Password*<input type="password" name="password2" placeholder="Write it again!" required></label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Rate our Site?></legend>
+                        <div id="rating">
+                            <input type="range" min="1" max="10" step=".1" id="r" name="r">
+                            <span id="left">YUCK!</span><span id="right">WOW!</span>
+                        </div>
+                        <div id="submit">
+                            <input type="submit" value="Send Your Info!" class="submitBtn">
+                        </div>
+
+                    </fieldset>
+                </form>
             </section>            
         </div>
     </main>
@@ -108,5 +125,6 @@
     <script src="scripts/responsiveNav.js"></script>
     <script src="scripts/darkModeLightMode.js"></script>
     <script src="scripts/visits.js"></script>
+    <script src="scripts/rating.js"></script>
 </body>
 </html>

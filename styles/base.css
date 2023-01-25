@@ -1,13 +1,26 @@
+:root {
+	--background: #0077b6;
+  --background2: #00b4d8;
+  --fontdark: #03045e;
+	--fontlight: white;
+	--border: black;
+	--borderlight: grey;
+	--shadow: grey;
+  --redx: "\2715";
+  --hamburger: "\2630";
+}
+
 body {
   height: 100vh;
   margin: 10px;
 
 }
 nav button.open::before {
-	content: "\2715"
+	content: var(--redx);
+  color: red;
 }
 nav {
-  background-color: blue; 
+  background-color: var(--background); 
   display: flex;
   flex-direction: column-reverse;
   align-items: center ;
@@ -22,14 +35,14 @@ nav button {
   margin: 10px;
 }
 nav a { 
-  color: white;
+  color: var(--fontlight);
   padding: 0 1rem;
 }
 nav button::before {
-	content: "\2630";
+	content: var(--hamburger);
 }
 nav button.open::before {
-	content: "\2715";
+	content: var(--redx);
   color: red;
 }
 nav section {
@@ -65,10 +78,10 @@ img.dark.light {
 	position: absolute;
 	top: 190px;
 	left: 14px;
-	background: radial-gradient(white, lightblue);
+	background: radial-gradient(var(--fontlight), var(--background2));
 	border: 1px solid black;
 	padding: 4px;
-	box-shadow: 0 0 2rem white;
+	box-shadow: 0 0 2rem var(--fontlight);
 	opacity: 0.75;
 }
 
@@ -88,13 +101,13 @@ a img {
 }
 
 header {
-  background: lightblue;
+  background: var(--background2);
   padding-left: 1%;
   height: 5em;
 }
 
 #profile {
-  background-color: white;
+  background-color: var(--fontlight);
   float: left;
   margin-right: 1.5em;
   height: 5em;
@@ -109,7 +122,7 @@ header h1 {
 }
 
 main {
-  background: white;
+  background: var(--fontlight);
   }
 
 main h2 {
@@ -127,7 +140,7 @@ main h2 {
 
 .card h3 {
   text-align: center;
-  background-color: lightblue;
+  background-color: var(--background2);
   border-radius: 20px 20px 0 0;
   margin: 0;
 }
@@ -160,12 +173,9 @@ ul.noBullets {
   margin-block: 0;
 }
 
-#map {
-  display: block;
-}
 
 footer {
-  background: blue;
+  background: var(--background);
   color: white;
   text-align: center;
   margin: auto;
@@ -173,25 +183,31 @@ footer {
 }
 
 .highlight {
-  color: white;
+  color: var(--fontlight);
 }
 
+#mapcontainer {
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
 iframe {
   display: block;
   margin: auto;
-  padding: 10px;
-  width: 80%;
+  padding: 0 10px;
+  width: 90%;
+  height: 90%;
+  margin: auto;
 }
 
 /*----------- FORM --------------*/
 form fieldset {
-  margin: 2rem 0;
-  border: 1px solid #445ba9;
-  border-radius: 10px;
-  padding: 0.5rem 2%;
+  margin: 1rem 0;
+  border: 1px solid var(--background2);
+  padding: 2%;
 }
 form legend {
-  color: #445ba9;
+  color: var(--background);
   margin: 0 1rem;
   padding: 0 .5rem;
 }
@@ -199,7 +215,7 @@ form legend {
 form label.top, form div {
   display: block;
   padding-top: 1rem;
-  color: #9c2c13;
+  color: black;
   font-size: .8rem;
 }
 
@@ -207,29 +223,26 @@ form label.top input, form label.top select {
   -webkit-appearance: none;
   display: block;
   font-size: 1rem;
-  border: solid 1px #999;
-  border-radius: 4px;
+  border: solid 1px var(--border);
+  border-radius: 8px;
   padding: .75rem;
-  color: #555;
-  width: 100%;
+  color: black;
+  width: 90%;
   max-width: 20rem;
   background-color: rgba(0,0,0,0.1);
-}
-form label.sbs {
-  display: block;
-  padding: .75rem 0;
-  color: #555;
 }
 
 form input.submitBtn {
   border: none;
-  background-color: #9c2c13;
-  color: white;
+  background-color: var(--background);
+  color: var(--fontlight);
   border-radius: 1rem;
+  margin-top: 1rem;
   padding: .75rem 1.5rem;
-  margin: 0 0 2rem 2%;
+  margin: 0 0 0 0;
   width: 96%;
   max-width: 20rem;
+  font-size: 14px;
 }
 
 form label.top input:required {
@@ -238,4 +251,17 @@ form label.top input:required {
 
 form label.top input:required:valid {
   border-left: green solid 6px;
+}
+
+#r {
+  width: 100%;
+}
+
+#left {
+  color: red;
+}
+
+#right {
+  float: right;
+  color: green;
 }
