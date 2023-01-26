@@ -281,8 +281,9 @@ padding-top: 0;
 
 #yourForm {
   display: none;
-  margin-left: auto;
+  margin-left: 10px;
   background-color: var(--fontlight);
+  padding-bottom: 8px;
 }
 
 table {
