@@ -305,6 +305,11 @@ th {
 td {
 	text-align: center;
 }
+tr:first-child th {
+	background-color: var(--background);
+	color: var(--fontlight);
+	border-left: var(--bord);
+}
 
 tbody tr:nth-child(even) {
 	background-color: var(--zebra);

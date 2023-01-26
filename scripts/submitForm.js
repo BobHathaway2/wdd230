@@ -11,13 +11,17 @@ const tdName = document.getElementById("tdName");
 const tdEmail = document.getElementById("tdEmail");
 const tdRating = document.getElementById("tdRating");
 const tdPW = document.getElementById("tdPassword");
-
+const alertRow = document.getElementById("alertRow")
 function handleForm(event) { 
     event.preventDefault(); 
     tdName.innerHTML = myName.value;
     tdEmail.innerHTML = email.value;
     tdPW.innerHTML = password1.value;
     tdRating.innerHTML = ratingValue.innerText;
+    if (ratingValue.innerText < 5) {
+        alertRow.style.backgroundColor = 'red';
+        alertRow.style.color = 'white';
+    }
     yourForm.style.display = "block";
     window.scrollTo(0, document.body.scrollHeight);
 } 
