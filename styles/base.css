@@ -258,7 +258,7 @@ form label.top input:required:valid {
 
 #ratings, #r {
 width: 83%;
-max-width: 400px;
+max-width: 20rem;
 padding-top: 0;
 }
 
@@ -308,4 +308,13 @@ td {
 
 tbody tr:nth-child(even) {
 	background-color: var(--zebra);
+}
+
+#formmessage {
+  color: var(--fontlight);
+  align-content: center;
+  width: 80%;
+  max-width: 20rem;
+  text-align: center;
+  padding: 8px;
 }
