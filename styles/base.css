@@ -291,6 +291,8 @@ table {
 	border: var(--bord);
 	box-shadow: 0 0 7px var(--shadow);
 	border-collapse: collapse;
+  width: 100%;
+  max-width: 20rem;
 }
 
 th, td {
