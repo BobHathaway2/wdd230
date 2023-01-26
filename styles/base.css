@@ -323,4 +323,5 @@ tbody tr:nth-child(even) {
   max-width: 20rem;
   text-align: center;
   padding: 8px;
+  margin: 4px;
 }
