@@ -19,6 +19,7 @@ function handleForm(event) {
     tdPW.innerHTML = password1.value;
     tdRating.innerHTML = ratingValue.innerText;
     yourForm.style.display = "block";
+    window.scrollTo(0, document.body.scrollHeight);
 } 
 myForm.addEventListener('submit', handleForm);
 
