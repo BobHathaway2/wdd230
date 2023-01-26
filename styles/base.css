@@ -8,6 +8,9 @@
 	--shadow: grey;
   --redx: "\2715";
   --hamburger: "\2630";
+  --alert: red;
+  --bord: 1px solid black;
+	--zebra: lightgrey;
 }
 
 body {
@@ -15,10 +18,12 @@ body {
   margin: 10px;
 
 }
+
 nav button.open::before {
 	content: var(--redx);
-  color: red;
+  color: var(--alert);
 }
+
 nav {
   background-color: var(--background); 
   display: flex;
@@ -26,7 +31,8 @@ nav {
   align-items: center ;
   justify-content: right;
   height: 6em;
-  }
+}
+
 nav button {
   position: absolute;
   top: 0px;
@@ -34,31 +40,36 @@ nav button {
   padding: 3px 5px;
   margin: 10px;
 }
+
 nav a { 
   color: var(--fontlight);
   padding: 0 1rem;
 }
+
 nav button::before {
 	content: var(--hamburger);
 }
+
 nav button.open::before {
 	content: var(--redx);
-  color: red;
+  color: var(--alert);
 }
+
 nav section {
   display: none;
 }
+
 nav section.open {
   display: block;
 }
+
 nav.open a img {
-  margin: 3px;}
+  margin: 3px;
+}
 
 a.icon {
   padding: 0;
 }
-
-
 
 img.dark.light {
   height: 30px;
@@ -135,7 +146,7 @@ main h2 {
   border: 2px;
   border-radius: 19px;
   box-shadow: 0 0 10px black;
-  margin: 1em;
+  margin-top: 10px;
 }
 
 .card h3 {
@@ -145,32 +156,17 @@ main h2 {
   margin: 0;
 }
 
-.card ul {
-  padding: 0 1em;
-}
 
-.card p {
-  margin: 1em 1em;
-}
 
 ul.noBullets {
   list-style:none;
-}
-.card li p {
-  margin: .5em 0;
-}
-
-.card a {
-  margin: 1em;
-  padding: 0;
-  border: 1em;
-}
-
-.card li p a {
   margin: 0;
   padding: 0;
-  margin-block-start: 0;
-  margin-block: 0;
+}
+
+.card p, .card a {
+  margin: 1px;
+  padding: 8px 8px;
 }
 
 
@@ -186,18 +182,24 @@ footer {
   color: var(--fontlight);
 }
 
-#mapcontainer {
-  display: flex;
-  width: 100%;
-  margin: auto;
+.google-maps {
+  position: relative;
+  height: 0;
+  overflow: hidden;
 }
+
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 iframe {
   display: block;
-  margin: auto;
   padding: 0 10px;
   width: 90%;
-  height: 90%;
-  margin: auto;
 }
 
 /*----------- FORM --------------*/
@@ -229,7 +231,7 @@ form label.top input, form label.top select {
   color: black;
   width: 90%;
   max-width: 20rem;
-  background-color: rgba(0,0,0,0.1);
+  background-color: lightgrey;
 }
 
 form input.submitBtn {
@@ -253,15 +255,56 @@ form label.top input:required:valid {
   border-left: green solid 6px;
 }
 
-#r {
-  width: 100%;
+#ratings, #r {
+width: 83%;
+max-width: 400px;
+padding-top: 0;
 }
 
+#rating {
+  font-size: 20px;
+  color: rgb(80, 78, 78);
+}
+
+
 #left {
-  color: red;
+  color: var(--alert);
 }
 
 #right {
   float: right;
   color: green;
+}
+
+/*----------- TABLE --------------*/
+
+#yourForm {
+  display: none;
+  margin-left: auto;
+  background-color: var(--fontlight);
+}
+
+table {
+	margin: 10px;
+	border: var(--bord);
+	box-shadow: 0 0 7px var(--shadow);
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 7px 15px;
+  border: var(--bord);
+}
+
+th {
+	background-color: var(--background2);
+	font-size: larger;
+}
+
+td {
+	text-align: center;
+}
+
+tbody tr:nth-child(even) {
+	background-color: var(--zebra);
 }

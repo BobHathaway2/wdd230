@@ -1,7 +1,8 @@
 const rangevalue = document.getElementById("r");
+const ratingValue = document.getElementById("ratingValue");
 
 function displayRatingValue() {
-    sessionStorage.setItem("rating", rangevalue.value);
+    ratingValue.innerText = r.value;
 }
-
+ratingValue.innerText = "5";
 rangevalue.addEventListener('change', displayRatingValue);
