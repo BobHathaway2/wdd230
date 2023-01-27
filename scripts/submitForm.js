@@ -12,6 +12,7 @@ const tdEmail = document.getElementById("tdEmail");
 const tdRating = document.getElementById("tdRating");
 const tdPW = document.getElementById("tdPassword");
 const alertRow = document.getElementById("alertRow")
+
 function handleForm(event) { 
     event.preventDefault(); 
     tdName.innerHTML = myName.value;

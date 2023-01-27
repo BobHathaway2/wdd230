@@ -193,4 +193,14 @@ img.tooele-photo {
 #tooele-photos h3 {
 	text-align: center;
 }
+/* ====================================== join page ====================================== */
 
+#joinMainDiv input, #joinMainDiv label {
+	display: block;
+	max-width: 400px;
+	width: 80%;
+}
+#joinMainDiv label {
+	margin-top: 10px;
+}
+	
