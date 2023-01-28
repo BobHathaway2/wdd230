@@ -62,3 +62,18 @@
         transition: transform 1s;
     }
 }
+/* ====================================== join page ====================================== */
+
+@media only screen and (min-width: 650px) {
+    #joinMainDiv {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #memberForm {
+        grid-column: 1 / 2;
+    }
+    #levels {
+        grid-column: 2 / 3;
+        height: auto;
+    }
+}

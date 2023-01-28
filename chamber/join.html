@@ -20,10 +20,10 @@
 </head>
 <body>
     <header> 
-        <img src="images/tccat.webp" alt="tooele county chamber and tourism logo">
+        <img src="images/tccat.webp" alt="tooele county chamber and tourism logo" width="78" height="80">
         <h1 id="test1">Tooele County</h1>
         <h2 id="test2">Chamber and Tourism</h2>
-        <button></button>
+        <button id="hamburger menu"></button>
         <nav>
             <ul>
                 <li><a href="./index.html">Home</a></li>
@@ -51,17 +51,18 @@
     <hr>   
     <main>
         <div id="joinMainDiv">
-            <form method='get' action="thankyou.html">
+            <form class="card" id="memberForm" method='get' action="thankyou.html">
+                <h3>Share Some Information With Us</h3>
                 <fieldset>
-                    <legend>Share Some Information With Us</legend>
+                    
                     <label class="top">First Name*<input type="text" name="fname" required></label>
                     <label class="top">Last Name*<input type="text" name="lname" required></label>
-                    <label class="top">Title<input type="text" name="title" pattern="[a-zA-Z\s\-]{7,}"  ></label>
+                    <label class="top">Title<input type="text" name="title" placeholder='Shift Lead, Owner, Manager, Regional Director...' pattern="[a-zA-Z\s\-]{7,}"  ></label>
                     <label class="top">Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
                     <label class="top">Cell Phone*<input type="tel" name="phone" placeholder="1235551234" required></label>
                     <label class="top">Business Name/Title*<input type="text" name="title" placeholder="ACME Consulting" required></label>
-                    <label for="membership" class="top">Membership Level*</label>
-                        <select required name="pets" id="membership" name="membership">
+                    <label for="membership" class="top">Membership Level*
+                        <select id="membership" name="membership" required>
                             <option value="">--Please choose an option--</option>
                             <option value="np">NP (non profit)</option>
                             <option value="bronze">Bronze</option>
@@ -69,27 +70,89 @@
                             <option value="gold">Gold</option>
                         </select>
                     </label>
-                    <label for="w3review">Brief Business Description:
-                        <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Tell us a little bit about your business."></textarea>
+                    <label class='top' for="description">Brief Business Description:
+                        <textarea id="description" name="description" rows="4" cols="50" placeholder="Tell us a little bit about your business."></textarea>
                     </label>
-                    <label id="hiddenTime"><input type="hidden" name="time"></label>
+                    <span name="hiddenDate" id="hiddenDate"></span>
+
                 </fieldset>
                 <input type="submit" value="Request Membership" class="submitBtn">
+            </form>
+            <div class="card" id="levels">
+                <h3>Membership Levels</h3>
+                <div id=joinTable>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Level</th>
+                                <th>Cost</th>
+                                <th>Benefits</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                        <td>Non Profit</td>
+                        <td>Free</td>
+                        <td>
+                            <ul>
+                                <li>On-line association with chamber</li>
+                                <li>Chamber Weekly News</li>
+                            </ul>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>Bronze</td>
+                            <td>$200/yr</td>
+                            <td>
+                                <ul>
+                                    <li>Base+</li>
+                                    <li>Company Logo and link</li>
+                                    <li>Chamber Accreditation Icon</li>
+                                    <li>Web Click Statistics on Logo</li>
+                                    <li>Member Deals and 10% Event Discounts</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr id="alertRow">
+                            <td>Silver</td>
+                            <td>$400/yr</td>
+                            <td>
+                                <ul>
+                                    <li>Bronze+</li>
+                                    <li>Web Comparitive Results with other businesses</li>
+                                    <li>Advertisement in Weekly News</li>
+                                    <li>20% Event Discounts</li>
+                                </ul>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>Gold</td>
+                            <td>$800/yr</td>
+                            <td>
+                                <ul>
+                                    <li>Silver+</li>
+                                    <li>Business Featured in one Weekly News</li>
+                                    <li>50% Event Discounts</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-        </form>
+        </div>
     </main>
     <footer>
-        <section class="projectInfo">
+        <div class="projectInfo">
             <p id="contact">BYU-I WDD230 Project, Winter Semester 2023</p>
             <p>77 Sunset Strip, Tooele Utah 84074</p>
             <p>chamber@fakechamber.com</p>
             <p>(555) 555-1212</p>
-        </section>
+        </div>
         <p id="copyright"></p>
         <p id="lastModified">Last Modification:</p>
         </footer>
 
     <script src="scripts/getDates.js"></script>
     <script src="scripts/responsiveNav.js"></script>
+    <script src="scripts/join.js"></script>
 </body>
 </html>
