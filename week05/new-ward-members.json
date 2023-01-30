@@ -1,0 +1,18 @@
+{
+    "familyName" : "Hathaway",
+    "dateMovedIn" : "06/01/2005",
+    "familyMembers" : "2",
+    "bishopricVisit" : true,
+    "members" : [
+        {
+            "name" : "Bob",
+            "gender" : "m",
+            "birth" : "11/19/2000"
+        },
+        {
+            "name" : "Lynne",
+            "gender" : "f",
+            "birth" : "05/16/2001"
+        }
+    ]
+}
