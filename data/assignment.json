@@ -1,0 +1,20 @@
+{
+  "weeks" : [
+    {
+      "Week 01": [
+        {
+          "Holy Grail":  "week01/holygrail.html",
+          "Media Query": "week01/media-query.html",
+          "Pen": "https://codepen.io/rlhathaway/pen/NWBrLer", 
+          "Site Plan": "week01/chamber-site-plan.html"
+        }
+      ],
+      "Week 02:": [
+        {
+          "Design Page": "week02/design.html",
+          "BOM Top 10": "week02/bom.html"
+        }
+      ]
+    }
+  ]
+} 
