@@ -327,3 +327,24 @@ tbody tr:nth-child(even) {
   padding: 8px;
   margin: 4px;
 }
+
+/*----------- WEATHER --------------*/
+
+.weather section {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+ padding: 5px;
+ margin: 5px;
+}
+
+.weather-section {
+  display: flex;
+  align-items: center;
+}
+
+.weather-section img {
+  margin-left: 1rem;
+}
