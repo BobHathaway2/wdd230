@@ -3,8 +3,10 @@ const ul = document.getElementById('learning');
 const fileName = 'data/assignment.json';
 
 function insertLinks(data) {
+    console.log(JSON.parse(data));
     data.forEach((element) => {
         console.log(element);
+        console.log(JSON.parse(element));
     });
 }
 
