@@ -1,0 +1,98 @@
+{
+	"weeks": [{
+			"label": "Week 01",
+			"links": [{
+					"html": "week01/holygrail.html",
+					"tag": "Holy Grail"
+				},
+				{
+					"html": "week01/media-query.html",
+					"tag": "Media Query"
+				},
+				{
+					"html": "https://codepen.io/rlhathaway/pen/NWBrLer",
+					"tag": "Pen"
+				},
+				{
+					"html": "week01/chamber-site-plan.html",
+					"tag": "Site Plan"
+				}
+			]
+		},
+		{
+			"label": "Week 02",
+			"links": [{
+					"html": "week02/design.html",
+					"tag": "Design"
+				},
+				{
+					"html": "week02/bom.html",
+					"tag": "Book of Mormon"
+				}
+			]
+		},
+		{
+			"label": "Week 03",
+			"links": [{
+					"html": "week03/images/landscape.webp",
+					"tag": "WebP"
+				},
+				{
+					"html": "week03/lazyload.html",
+					"tag": "Lazy Load"
+				},
+				{
+					"html": "https://codepen.io/rlhathaway/pen/JjBrZwG",
+					"tag": "CodePen"
+				},
+				{
+					"html": "week03/bom.html",
+					"tag": "Book of Mormon"
+				}
+			]
+		},
+		{
+			"label": "Week 04",
+			"links": [{
+					"html": "https://codepen.io/rlhathaway/pen/wvxyQBd",
+					"tag": "Pseudo Classes"
+				},
+				{
+					"html": "week04/images/combinators.webp",
+					"tag": "Combinator"
+				},
+				{
+					"html": "week04/tablebuild.html",
+					"tag": "Table"
+				},
+				{
+					"html": "week04/forms/index.html",
+					"tag": "Forms"
+				}
+			]
+		},
+		{
+			"label": "Week 05",
+			"links": [{
+					"html": "https://codepen.io/rlhathaway/pen/mdjjPjj",
+					"tag": "Pen"
+				},
+				{
+					"html": "week05/prophets.html",
+					"tag": "Prophets"
+				},
+				{
+					"html": "week05/weather.html",
+					"tag": "Weather"
+				}
+			]
+		},
+    {
+      "label" : "Week 06",
+      "links": [{
+        "html": "",
+        "tag": ""
+      } ]
+    }
+	]
+}
