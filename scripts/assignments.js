@@ -1,21 +1,30 @@
 
-const ul = document.getElementById('learning');
+const learningCard = document.getElementById('learning');
 const fileName = 'data/assignment.json';
+const ul = document.createElement("ul");
 
-function insertLinks(data) {
-    console.log(JSON.parse(data));
-    data.forEach((element) => {
-        console.log(element);
-        console.log(JSON.parse(element));
+
+
+function createLearningActivities(data) {
+    data.weeks.forEach((element) => {
+        let li = document.createElement("li");
+        let p = document.createElement("p");
+        p.textContent = `${element.label}:`; 
+        let linkCount = element.links.length;
+        for (let i = 0; i < linkCount; i++) {
+            let link = element.links[i];
+            let a = document.createElement("a");
+            let span = document.createElement("span");
+            a.textContent = link.tag;
+            a.setAttribute("href", link.html);
+            span.appendChild(a);
+            p.appendChild(span);
+            }
+        li.appendChild(p);
+        ul.appendChild(li);
     });
+    learning.appendChild(ul);
 }
-
-    // currentTemp.innerHTML = `${data.main.temp}&deg;F`;
-    // const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-    // let desc = data.weather[0].description;
-    // weatherIcon.setAttribute('src', iconsrc);
-    // weatherIcon.setAttribute('alt', desc);
-    // captionDesc.textContent = `${desc}`;
 
 
 async function apiFetch() {
@@ -23,8 +32,7 @@ async function apiFetch() {
       const response = await fetch(fileName);
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
-        insertLinks(data.weeks);
+        createLearningActivities(data);
       } else {
           throw Error(await response.text());
       }

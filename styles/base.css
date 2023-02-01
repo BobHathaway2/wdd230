@@ -348,3 +348,13 @@ h4 {
 .weather-section img {
   margin-left: 1rem;
 }
+
+/*--------------- Learning Activities ------------*/
+
+#learning ul {
+  list-style-type: none;
+}
+
+#learning span:not(:last-child)::after {
+  content: '|';
+}
