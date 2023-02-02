@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <meta name="author" content="Robert Lynn Hathaway">
     <meta property="og.title" content="WDD 230 - Tooele County Chamber and Tourism">
     <meta property="og.type" content="website">
-    <!-- <meta property="og.image" content="https://bobhathaway2.github.io/wdd230/chamber/images/.png"> -->
+    <meta property="og.image" content="https://bobhathaway2.github.io/wdd230/chamber/images/tooele.webp">
     <meta property="og.url" content="https://bobhathaway2.github.io/wdd230/chamber/index.html">
     <link rel="stylesheet" href="styles/normalize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,37 +16,64 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="media stylesheet" href="styles/larger.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>WDD 230 - Tooele County Chamber and Tourism - Bob Hathaway</title>
+    <title>BYU-I WDD 230 - Tooele County Chamber and Tourism</title>
 </head>
 <body>
     <header> 
-        <img src="images/tccat.png">
-        <h1>Tooele County</h1>
-        <h3>Chamber and Tourism</h2>
+        <img src="images/tccat.webp" alt="tooele county chamber and tourism logo">
+        <h1 id="test1">Tooele County</h1>
+        <h2 id="test2">Chamber and Tourism</h2>
         <button></button>
         <nav>
             <ul>
-                <!-- <li><a id="menu" href="#"></a></li> -->
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./discover.html">Discovery</a></li>
-                <li><a href="">Directory</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="./discover.html">Discover</a></li>
+                <li><a href="./directory.html">Directory</a></li>
                 <li><a href="./join.html">Join</a></li>
             </ul>
         </nav>
  
     </header>
-
-
+    <div id="hero">
+        <div id="hero-box">
+            <picture>
+                <source media="(max-width: 400px)" srcset="images/tooele-400.webp">
+                <source media="(max-width: 960px)" srcset="images/tooele-960.webp">
+                <source media="(max-width: 1400px)" srcset="images/tooele-1400.webp">
+                <img id="hero-img" src="images/tooele.webp" alt="lanscape view of Tooele County from Stansbury Island across Great Salt Lake"  loading="lazy" width="4023" height="1191">
+            </picture>
+        </div>
+        <div>
+            <a class='join' href="join.html">Join!</a>
+        </div>
+        <div id="on-top">
+            <h3 class="home-title">Tooele Chamber</h3>
+            <h4>Directory of Members</h4>
+        </div>
+    </div>
+    <hr>   
     <main>
-        <img id="hero-img" src="images/tooele.png" alt="lanscape view of Tooele County from Stansbury Island across Great Salt Lake">
-        <h1>Placeholder for directory page</h1>
+        <div class="menu">
+            <button id="grid">⏹️Grid</button>
+            <button id="list">📄List</button>
+        </div>
+        <div id="directoryMainDiv">
+
+        </div>
     </main>
     <footer>
+        <section class="projectInfo">
+            <p id="contact">BYU-I WDD230 Project, Winter Semester 2023</p>
+            <p>77 Sunset Strip, Tooele Utah 84074</p>
+            <p>chamber@fakechamber.com</p>
+            <p>(555) 555-1212</p>
+        </section>
         <p id="copyright"></p>
-        <p class="highlight" id="lastModified">Last Modification:</p>
-    </footer>
+        <p id="lastModified">Last Modification:</p>
+        </footer>
+
     <script src="scripts/get-dates.js"></script>
     <script src="scripts/responsive-nav.js"></script>
-    <script src="scripts/dark-mode.js"></script>
+    <script src="scripts/directory.js"></script>
 </body>
 </html>

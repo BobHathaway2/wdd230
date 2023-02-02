@@ -1,0 +1,80 @@
+{
+    "businesses" : [{
+        "name": "Roni's Signs & Window Designs",
+        "level" : "Gold",
+        "address": "38 West Vine Street",
+        "city": "Tooele",
+        "state": "UT",
+        "zip" : "84074",
+        "phone": "(435)833-9330",
+        "website": "http://ronissigns.com/",
+        "image" : "images/ronis.webp"
+    },
+    {
+        "name": "Group 1 Real Estate",
+        "level" : "Gold",
+        "address": "588 S Park Hill Dr",
+        "city": "Tooele",
+        "state": "UT",
+        "zip" : "84074",
+        "phone": "(435)840-5029",
+        "website": "https://www.tooelehomes4sale.com/",
+        "image" : "images/realtor.webp"
+    },
+    {
+        "name": "Fallen Sky Stone",
+        "level" : "Silver",
+        "address": "15 N Main St",
+        "city": "Tooele",
+        "state": "UT",
+        "zip" : "84074",
+        "phone": "(801)856-7548",
+        "website": "https://www.fallenskystone.com/",
+        "image" : "images/fallen.webp"
+    },
+    {
+        "name": "Jim's Family Restaurant",
+        "level" : "Silver",
+        "address": "281 N Main St",
+        "city": "Tooele",
+        "state": "UT",
+        "zip" : "84074",
+        "phone": "(435)833-0111",
+        "website": "https://www.jimsfamilyrestaurant.com/jims-tooele",
+        "image" : "images/jims.webp"
+    },
+    {
+        "name": "Affordable Lock and Key",
+        "level" : "Silver",
+        "address": "772 N Main St",
+        "city": "Tooele",
+        "state": "UT",
+        "zip" : "84074",
+        "phone": "(385)315-7027",
+        "website": "http://www.affordablelockandkey.us/",
+        "image" : "images/locksmith.webp"
+    },
+    {
+        "name": "Tooele Transcript Bulletin",
+        "level" : "Bronze",
+        "address": "58 N Main St",
+        "city": "Tooele",
+        "state": "UT",
+        "zip" : "84074",
+        "phone": "(435) 882-0050",
+        "website": "http://tooeleonline.com/",
+        "image" : "images/transcript.webp"
+    },
+    {
+        "name": "Heritage Homes & Fireplaces",
+        "level" : "Bronze",
+        "address": "105 N Main St",
+        "city": "Tooele",
+        "state": "UT",
+        "zip" : "84074",
+        "phone": "(435)833-9930",
+        "website": "https://www.heritagehf.com/",
+        "image" : "images/fireplace.webp"
+    }]
+}
+

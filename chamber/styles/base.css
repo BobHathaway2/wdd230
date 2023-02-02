@@ -128,7 +128,7 @@ nav a {
 #on-top h3, #on-top h4 {
 	margin: 0;
 	color: white	;
-	font-size: 3vw;
+	font-size: 14px;
 }	
 .join {
 	font-size: 30px;
@@ -272,4 +272,82 @@ td {
 table ul {
 	margin: 0;
 	padding: 5px 0 0 15px;
+}
+
+/* ================== directory ==================== */
+
+.menu {
+	margin: 1rem auto;
+	border: none;
+	padding: 0.5rem;
+	background-color: var(--background);
+	text-align: center;
+}
+
+#directoryMainDiv .card {
+	position: relative;
+	align-content: center;
+}
+
+#list, #grid {
+	background: var(--borderlight);
+	color: var(--fontlight);
+}
+
+#directoryMainDiv.grid {
+	display: grid;
+	align-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 5px;
+}
+
+#directoryMainDiv.list {
+	display: block;
+	align-content: center;
+}
+
+#directoryMainDiv img {
+	height: 80%;
+	width: auto;
+	max-width: 375px;
+	padding-top: 10px;
+	vertical-align: middle;
+	margin: auto;
+}
+
+#directoryMainDiv.list img {
+	display: none;
+}
+#directoryMainDiv.list .sameHeight {
+	height: 0;
+}
+
+#directoryMainDiv.grid img {
+	display: block;
+}
+
+#directoryMainDiv.list .card {
+	display: block;
+	border: none;
+	border-radius: none;
+	box-shadow: none;
+	margin: 1em;
+	background-color: white;
+}
+
+#directoryMainDiv .card p {
+	margin: 0;
+}
+
+#directoryMainDiv .card p:not(:last-child) {
+	padding-bottom: 0;
+}
+
+#directoryMainDiv .card:not(:last-child) {
+	margin-bottom: 0;
+}
+
+#directoryMainDiv.list .card:not(:first-child) {
+	margin-top: 0;
+	padding-top: 0;
 }

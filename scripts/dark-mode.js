@@ -5,6 +5,7 @@ const mainDiv = document.querySelector(".mainDiv");
 const card = document.querySelectorAll(".card");
 const p = document.querySelectorAll(".turnWhiteInDarkMode");
 const a = document.querySelectorAll("a");
+const li = document.querySelectorAll("li")
 const menuItem = document.querySelectorAll(".menuItem");
 const remainBlack = document.querySelector("#remainBlackInDarkMode")
 const dark = 'images/darkmode.webp';
@@ -38,6 +39,9 @@ modeButton.addEventListener("click", () => {
 		main.style.color = "black";
         mainDiv.style.color = "black";
         body.style.background = "white";
+        li.forEach((ele) => {
+            ele.style.color = "white";
+        })
         card.forEach((cardOutline) => {
             cardOutline.style.boxShadow = "0 0 10px black"
         })
