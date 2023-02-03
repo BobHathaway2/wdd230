@@ -27,14 +27,17 @@ async function apiFetch() {
         portraitDiv.classList.add("sameHeight");
         const portrait = document.createElement("img");
         const address = document.createElement("p");
+        address.classList.add("dirAddress");
         const phone = document.createElement("p");
+        phone.classList.add("dirPhone");
         const webp = document.createElement("p");
+        webp.classList.add("dirWeb");
         const webAddress = document.createElement("a");
         name.textContent = business.name;
         address.textContent = `${business.address}, ${business.city}, ${business.state} ${business.zip}`;
         phone.textContent = business.phone;
         webAddress.setAttribute("href", business.website);
-        webAddress.textContent = business.website;
+        webAddress.textContent = "website";
         portrait.setAttribute("src", business.image);
         portrait.setAttribute("alt", `${business.name} icon`);
         portrait.setAttribute("loading", "lazy");
