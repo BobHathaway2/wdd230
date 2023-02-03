@@ -19,7 +19,6 @@ async function apiFetch() {
   
   const displayBusinesses = (businesses) => {
     businesses.forEach((business) => {
-        cards.classList.add("list");
         const card = document.createElement("section");
         card.classList.add("card");
         const name = document.createElement("h3");
