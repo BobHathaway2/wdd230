@@ -137,6 +137,7 @@ nav a {
 	background-color: white;
 }
 /* --------------------- main --------------------- */
+
 .card {
 	display:  block;
 	border: 2px;
@@ -153,6 +154,38 @@ nav a {
 }
 .card h4, p {
 	padding: .5em;
+}
+
+h4 {
+	padding: 5px;
+	margin: 5px;
+}
+
+.weather-section {
+	display: flex;
+	align-items: center;
+}
+
+#weather p {
+	margin: 0;
+	padding: 8px 8px 0 0px;
+}
+
+#weather:first-child {
+	text-decoration: underline;
+}
+
+.weather-section img {
+	margin-left: 0px;
+}
+
+#weather .weather-section p {
+	padding-top: 0;
+}
+h5 {
+	margin: 0;
+	padding: 4px 8px;
+	text-align: center;
 }
 /* --------------------- footer --------------------- */
 footer {
