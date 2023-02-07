@@ -9,43 +9,40 @@ const url = `//api.openweathermap.org/data/2.5/forecast?lat=${tlat}&lon=${tlon}&
 
 function displayWeather(data) {
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday","Saturday"]
+    let dayCount = 0;
+    let displayForecast = true;
     let mst = new Date();
     let thisDay = mst.getDay();
-    let displayForecast = true;
     for (var i = 0; i < data.list.length; i++) {
         gmt = new Date(data.list[i].dt_txt);
         nextDay = new Date(gmt.setHours(gmt.getHours() - gmtOffset)).getDay();
         if ((thisDay != nextDay) || (i == 0) || i == data.list.length - 1) {
             thisDay = nextDay;
+            dayCount += 1;
             const iconsrc = `https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}.png`;
             const weatherSection = document.createElement("div");
             weatherSection.classList.add("weather-section");
-            const forecast = document.createElement("h4");
-            const dayOfWeek = document.createElement("h5");
+            const dayOfWeek = document.createElement("h4");
             dayOfWeek.classList.add('day-of-week');
             const description = document.createElement("p");
             const wxIcon = document.createElement("img");
             
             let desc = data.list[i].weather[0].description;
             if (i == 0) {
-                forecast.innerText = `Current Weather:`;
+                dayOfWeek.innerText = `Current:`;
             } else {
-                if ((i > 0) && displayForecast) {
-                    forecast.innerText = `Five Day Forecast:`;
-                    dayOfWeek.innerText = `${days[thisDay]}`
-                    displayForecast = false;
-                } else {
-                    dayOfWeek.innerText = `${days[thisDay]}`
-                }
+                dayOfWeek.innerText = `${days[thisDay]}:`
             }
             wxIcon.setAttribute('src', iconsrc);
             wxIcon.setAttribute('alt', desc);
-            description.innerHTML = `${desc} and ${data.list[i].main.temp}&deg; F`;
+            description.innerHTML = `${desc} and ${data.list[i].main.temp}&deg;F`;
             weatherSection.appendChild(wxIcon); 
             weatherSection.appendChild(description);
-            weather.appendChild(forecast);
             weather.appendChild(dayOfWeek);
             weather.appendChild(weatherSection);
+            if (dayCount >= 4) {
+                break;
+            }
         }
     }
   }

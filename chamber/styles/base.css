@@ -164,28 +164,27 @@ h4 {
 .weather-section {
 	display: flex;
 	align-items: center;
+	padding: 0;
+	margin: 0;
 }
 
 #weather p {
 	margin: 0;
-	padding: 8px 8px 0 0px;
+	padding: 8px 8px 0 0;
 }
 
-#weather:first-child {
-	text-decoration: underline;
-}
 
 .weather-section img {
-	margin-left: 0px;
+	margin-left: 0;
+	margin-top: -5px;
 }
 
 #weather .weather-section p {
 	padding-top: 0;
 }
-h5 {
-	margin: 0;
-	padding: 4px 8px;
-	text-align: center;
+h4.day-of-week {
+	margin: 0 0 0 4px;
+	padding: 8px 0 0 0;
 }
 /* --------------------- footer --------------------- */
 footer {
