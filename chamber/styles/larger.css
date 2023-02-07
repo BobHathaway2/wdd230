@@ -38,7 +38,6 @@
     #on-top h3, #on-top h4 {
         font-size: 3.7vw;
     }	
-    
 
 /* ====================================== discover page ====================================== */
     .discover-div {
@@ -66,9 +65,15 @@
     }
 
 }
-/* ====================================== join page ====================================== */
 
 @media only screen and (min-width: 650px) {
+    .scroll-left p {
+        font-size: 26px;
+        animation: scroll-left 15s linear infinite;
+    }
+
+    /* ====================================== join page ====================================== */
+
     #joinMainDiv {
         display: grid;
         grid-template-columns: 1fr 1fr;

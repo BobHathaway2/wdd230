@@ -16,6 +16,7 @@ function displayWeather(data) {
     for (var i = 0; i < data.list.length; i++) {
         gmt = new Date(data.list[i].dt_txt);
         nextDay = new Date(gmt.setHours(gmt.getHours() - gmtOffset)).getDay();
+        let thisTemp = 1;
         if ((thisDay != nextDay) || (i == 0) || i == data.list.length - 1) {
             thisDay = nextDay;
             dayCount += 1;
@@ -43,6 +44,8 @@ function displayWeather(data) {
             if (dayCount >= 4) {
                 break;
             }
+        } else {
+
         }
     }
   }
