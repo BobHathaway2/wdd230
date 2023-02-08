@@ -57,7 +57,11 @@ function randomizeBusinesses(businesses) {
     let threeToSpotlight = [];
     let threeToSpotlightIndexes = [];
     let spotlightedCounts = JSON.parse(localStorage.getItem("spotLightedCounts"));
-    // let chooseFrom = [];
+    if (spotlightedCounts == null) {
+        spotlightedCounts = [];
+        spotlightedCounts.length = businessesToHighlight.length;
+        spotlightedCounts.fill(0);
+    }
     let randomBusiness;
     let chooseFrom = [];
     for (i = 0; i < spotlightSpots; i++) {
