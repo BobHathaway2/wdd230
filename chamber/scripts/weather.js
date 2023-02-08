@@ -11,15 +11,14 @@ function displayWeather(data) {
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday","Saturday"]
     let dayCount = 0;
     let displayData = 0;
-    let displayForecast = true;
     let mst = new Date();
     let thisDay = mst.getDay();
     for (var i = 0; i < data.list.length; i++) {
         gmt = new Date(data.list[i].dt_txt);
-        nextDay = new Date(gmt.setHours(gmt.getHours() - gmtOffset)).getDay();
-        let thisTemp = 1;
-        if ((thisDay != nextDay) || (i == 0) || i == data.list.length - 1) {
-            thisDay = nextDay;
+        forecastDay = new Date(gmt.setHours(gmt.getHours() - gmtOffset)).getDay();
+        let forecastHour = gmt.getHours();
+        let display = (((forecastHour >= 15 && forecastHour <= 17) && (thisDay != forecastDay) ) || (i == 0) | (i == data.list.length - 1));
+        if (display) {
             dayCount += 1;
             const iconsrc = `https://openweathermap.org/img/wn/${data.list[displayData].weather[0].icon}.png`;
             const weatherSection = document.createElement("div");
@@ -33,7 +32,7 @@ function displayWeather(data) {
             if (i == 0) {
                 dayOfWeek.innerText = `Current:`;
             } else {
-                dayOfWeek.innerText = `${days[thisDay]}:`
+                dayOfWeek.innerText = `${days[forecastDay]}:`
             }
             wxIcon.setAttribute('src', iconsrc);
             wxIcon.setAttribute('alt', desc);
@@ -45,11 +44,7 @@ function displayWeather(data) {
             if (dayCount >= 4) {
                 break;
             }
-        } else {
-            hourOfDay = gmt.getHours();
-            if ((hourOfDay > 15) && (hourOfDay <= 17)) {
-              displayData = i;
-          }
+            displayData = i + 1;
         }
     }
   }
