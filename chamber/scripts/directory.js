@@ -36,6 +36,7 @@ async function apiFetch() {
         address.textContent = `${business.address}, ${business.city}, ${business.state} ${business.zip}`;
         phone.textContent = business.phone;
         webAddress.setAttribute("href", business.website);
+        webAddress.setAttribute("target", "none");
         webAddress.textContent = "website";
         portrait.setAttribute("src", business.image);
         portrait.setAttribute("alt", `${business.name} icon`);

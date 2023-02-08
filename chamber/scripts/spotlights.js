@@ -28,10 +28,10 @@ function buildSpotlightCards(businesses) {
         webp.classList.add("dirWeb");
         const webAddress = document.createElement("a");
         name.textContent = business.name;
-        name.textContent = business.name;
         address.textContent = `${business.address}, ${business.city}, ${business.state} ${business.zip}`;
         phone.textContent = business.phone;
         webAddress.setAttribute("href", business.website);
+        webAddress.setAttribute("target", "none");
         webAddress.textContent = "website";
         portrait.setAttribute("src", business.image);
         portrait.setAttribute("alt", `${business.name} icon`);
@@ -72,12 +72,6 @@ function randomizeBusinesses(businesses) {
         }
         randomBusiness = chooseFrom[Math.floor(Math.random()*(chooseFrom.length))];
         threeToSpotlightIndexes[i] = randomBusiness;
-        // console.log(businessesToHighlight);
-        // console.log(spotlightedCounts);
-        // console.log(threeToSpotlight);
-        // console.log(chooseFrom);
-        // console.log(i);
-        // console.log(j);
         spotlightedCounts[randomBusiness] += 1;
         localStorage.setItem("spotLightedCounts", JSON.stringify(spotlightedCounts));
     }

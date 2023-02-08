@@ -144,7 +144,7 @@ nav a {
 	position: relative;
 	background: var(--backgrounddark);
 	color: var(--fontlight);
-	border: 1px solid --bord;
+	border: 1px solid var(--bord);
    }
    .scroll-left p {
 	position: absolute;
