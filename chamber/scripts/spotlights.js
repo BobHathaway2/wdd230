@@ -13,12 +13,37 @@ function getGoldAndSilver (businesses) {
 }
 
 function buildSpotlightCards(businesses) {
-    let i = 3;
+    let i = 4;
     businesses.forEach((business) => {
-    
-        const h3 = document.querySelector(`section.card:nth-child(${i}) h3`)
-        h3.textContent = business.name;
-
+        const card = document.querySelector(`section.card:nth-child(${i})`)
+        const name = document.createElement("h3");
+        const portraitDiv = document.createElement("div");
+        portraitDiv.classList.add("sameHeight");
+        const portrait = document.createElement("img");
+        const address = document.createElement("p");
+        address.classList.add("dirAddress");
+        const phone = document.createElement("p");
+        phone.classList.add("dirPhone");
+        const webp = document.createElement("p");
+        webp.classList.add("dirWeb");
+        const webAddress = document.createElement("a");
+        name.textContent = business.name;
+        name.textContent = business.name;
+        address.textContent = `${business.address}, ${business.city}, ${business.state} ${business.zip}`;
+        phone.textContent = business.phone;
+        webAddress.setAttribute("href", business.website);
+        webAddress.textContent = "website";
+        portrait.setAttribute("src", business.image);
+        portrait.setAttribute("alt", `${business.name} icon`);
+        portrait.setAttribute("loading", "lazy");
+        portrait.setAttribute("height", "180");    
+        card.appendChild(name);
+        card.appendChild(portraitDiv);
+        portraitDiv.appendChild(portrait);
+        card.appendChild(address);
+        card.appendChild(phone);
+        card.appendChild(webp);
+        webp.appendChild(webAddress);
         i += 1;
     })
 }

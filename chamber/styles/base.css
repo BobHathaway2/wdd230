@@ -163,10 +163,10 @@ nav a {
    /* Move it (define the animation) */
    @keyframes scroll-left {
 	0%   {
-	transform: translateX(50%); 		
+	transform: translateX(100%); 		
 	}
 	100% {
-	transform: translateX(-50%); 
+	transform: translateX(-100%); 
 	}
    }
    
@@ -220,6 +220,22 @@ h4.day-of-week {
 	margin: 0 0 0 4px;
 	padding: 8px 0 0 0;
 }
+
+#spotlights {
+	margin: auto;
+	margin-top: 10px;
+	padding: 10px;
+	color: var(--fontdark);
+	background-color: var(--backgroundlight);
+	border: 1px solid var(--border);
+	text-align: center;
+	font-family: tangerine;
+	font-size: xx-large;
+	font-weight: bolder;
+	width: 80%;
+}
+
+
 /* --------------------- footer --------------------- */
 footer {
 	height: 6rem;
@@ -228,6 +244,7 @@ footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 4fr 1fr 1fr;
+	padding-top: 10px;
 }
 footer .projectInfo {
 	text-align: center;
@@ -355,31 +372,24 @@ table ul {
 	color: var(--fontlight);
 }
 
-#directoryMainDiv .card {
+.business.card {
 	position: relative;
 	align-content: center;
 }
 
-#directoryMainDiv .card p {
+.business.card p {
 	margin: 0;
+	text-align: center;
 }
 
-#directoryMainDiv .card p:not(:last-child) {
+.business.card p:not(:last-child) {
 	padding-bottom: 0;
 }
 
-#directoryMainDiv .card:not(:last-child) {
+.business.card:not(:last-child) {
 	margin-bottom: 0;
 }
 
-#directoryMainDiv img {
-	height: 80%;
-	width: auto;
-	max-width: 375px;
-	padding-top: 10px;
-	vertical-align: middle;
-	margin: auto;
-}
 
 #directoryMainDiv.grid {
 	display: grid;
@@ -388,10 +398,13 @@ table ul {
     grid-gap: 5px;
 }
 
-#directoryMainDiv.grid img {
+	.business.card img {
 	display: block;
 	height: 50px;
 	width: auto;
+	max-width: 375px;
+	padding-top: 10px;
+	margin: auto;
 }
 
 #directoryMainDiv.list {
