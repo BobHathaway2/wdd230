@@ -10,7 +10,6 @@ const url = `//api.openweathermap.org/data/2.5/forecast?lat=${tlat}&lon=${tlon}&
 function displayWeather(data) {
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday","Saturday"]
     let dayCount = 0;
-    let displayData = 0;
     let mst = new Date();
     let thisDay = mst.getDay();
     for (var i = 0; i < data.list.length; i++) {
@@ -20,7 +19,7 @@ function displayWeather(data) {
         let display = (((forecastHour >= 15 && forecastHour <= 17) && (thisDay != forecastDay) ) || (i == 0) | (i == data.list.length - 1));
         if (display) {
             dayCount += 1;
-            const iconsrc = `https://openweathermap.org/img/wn/${data.list[displayData].weather[0].icon}.png`;
+            const iconsrc = `https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}.png`;
             const weatherSection = document.createElement("div");
             weatherSection.classList.add("weather-section");
             const dayOfWeek = document.createElement("h4");
@@ -28,7 +27,7 @@ function displayWeather(data) {
             const description = document.createElement("p");
             const wxIcon = document.createElement("img");
             
-            let desc = data.list[displayData].weather[0].description;
+            let desc = data.list[i].weather[0].description;
             if (i == 0) {
                 dayOfWeek.innerText = `Current:`;
             } else {
@@ -36,7 +35,7 @@ function displayWeather(data) {
             }
             wxIcon.setAttribute('src', iconsrc);
             wxIcon.setAttribute('alt', desc);
-            description.innerHTML = `${desc} and ${data.list[displayData].main.temp}&deg;F`;
+            description.innerHTML = `${desc} and ${data.list[i].main.temp}&deg;F`;
             weatherSection.appendChild(wxIcon); 
             weatherSection.appendChild(description);
             weather.appendChild(dayOfWeek);
@@ -44,7 +43,6 @@ function displayWeather(data) {
             if (dayCount >= 4) {
                 break;
             }
-            displayData = i + 1;
         }
     }
   }
