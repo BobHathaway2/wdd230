@@ -136,7 +136,42 @@ nav a {
 	border-radius: 5px;
 	background-color: white;
 }
-/* --------------------- main --------------------- */
+/* --------------------- banner --------------------- */
+
+.scroll-left {
+	height: 50px;	
+	overflow: hidden;
+	position: relative;
+	background: var(--backgrounddark);
+	color: var(--fontlight);
+	border: 1px solid var(--bord);
+   }
+   .scroll-left p {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	line-height: 50px;
+	font-size: 4vw;
+	text-align: center;
+	/* Starting position */
+	transform:translateX(100%);
+	/* Apply animation to this element */
+	animation: scroll-left 10s linear infinite;
+	padding: 0;
+   }
+   /* Move it (define the animation) */
+   @keyframes scroll-left {
+	0%   {
+	transform: translateX(100%); 		
+	}
+	100% {
+	transform: translateX(-100%); 
+	}
+   }
+   
+   /* --------------------- main --------------------- */
+
 .card {
 	display:  block;
 	border: 2px;
@@ -154,6 +189,53 @@ nav a {
 .card h4, p {
 	padding: .5em;
 }
+
+h4 {
+	padding: 5px;
+	margin: 5px;
+}
+
+.weather-section {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+#weather p {
+	margin: 0;
+	padding: 8px 8px 0 0;
+}
+
+
+.weather-section img {
+	margin-left: 0;
+	margin-top: -5px;
+}
+
+#weather .weather-section p {
+	padding-top: 0;
+}
+h4.day-of-week {
+	margin: 0 0 0 4px;
+	padding: 8px 0 0 0;
+}
+
+#spotlights {
+	margin: auto;
+	margin-top: 10px;
+	padding: 10px;
+	color: var(--fontdark);
+	background-color: var(--backgroundlight);
+	border: 1px solid var(--border);
+	text-align: center;
+	font-family: tangerine;
+	font-size: xx-large;
+	font-weight: bolder;
+	width: 80%;
+}
+
+
 /* --------------------- footer --------------------- */
 footer {
 	height: 6rem;
@@ -162,6 +244,7 @@ footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 4fr 1fr 1fr;
+	padding-top: 10px;
 }
 footer .projectInfo {
 	text-align: center;
@@ -289,31 +372,24 @@ table ul {
 	color: var(--fontlight);
 }
 
-#directoryMainDiv .card {
+.business.card {
 	position: relative;
 	align-content: center;
 }
 
-#directoryMainDiv .card p {
+.business.card p {
 	margin: 0;
+	text-align: center;
 }
 
-#directoryMainDiv .card p:not(:last-child) {
+.business.card p:not(:last-child) {
 	padding-bottom: 0;
 }
 
-#directoryMainDiv .card:not(:last-child) {
+.business.card:not(:last-child) {
 	margin-bottom: 0;
 }
 
-#directoryMainDiv img {
-	height: 80%;
-	width: auto;
-	max-width: 375px;
-	padding-top: 10px;
-	vertical-align: middle;
-	margin: auto;
-}
 
 #directoryMainDiv.grid {
 	display: grid;
@@ -322,10 +398,13 @@ table ul {
     grid-gap: 5px;
 }
 
-#directoryMainDiv.grid img {
+	.business.card img {
 	display: block;
 	height: 50px;
 	width: auto;
+	max-width: 375px;
+	padding-top: 10px;
+	margin: auto;
 }
 
 #directoryMainDiv.list {

@@ -20,7 +20,7 @@ async function apiFetch() {
   const displayBusinesses = (businesses) => {
     businesses.forEach((business) => {
         const card = document.createElement("section");
-        card.classList.add("card");
+        card.classList.add("business","card");
         const name = document.createElement("h3");
         const portraitDiv = document.createElement("div");
         portraitDiv.classList.add("sameHeight");
@@ -36,6 +36,7 @@ async function apiFetch() {
         address.textContent = `${business.address}, ${business.city}, ${business.state} ${business.zip}`;
         phone.textContent = business.phone;
         webAddress.setAttribute("href", business.website);
+        webAddress.setAttribute("target", "none");
         webAddress.textContent = "website";
         portrait.setAttribute("src", business.image);
         portrait.setAttribute("alt", `${business.name} icon`);
