@@ -1,35 +1,65 @@
 const jsonFile = 'data/directory.json';
 
-function randomizeBusinesses() {
+function getGoldAndSilver (businesses) {
+    let i = 0;
+    let businessesArray = [];
+    businesses.forEach((business) => {
+        if (business.level == "Gold" || business.level == "Silver") {
+            businessesArray[i] = business;
+            i = i + 1;
+        }
+    })
+    return businessesArray;
+}
+
+function buildSpotlightCards(businesses) {
+    let i = 3;
+    businesses.forEach((business) => {
+    
+        const h3 = document.querySelector(`section.card:nth-child(${i}) h3`)
+        h3.textContent = business.name;
+
+        i += 1;
+    })
+}
+
+function randomizeBusinesses(businesses) {
+
+    businessesToHighlight = getGoldAndSilver(businesses);
 
     const spotlightSpots = 3;
 
     let threeToSpotlight = [];
-    let businessesToHighlight = [3, 4, 8, 9];
-    let businessesArray = ['b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7', 'b8', 'b9', 'b10'];
-    // let spotlightedCounts = [0, 0, 0, 0];
+    let threeToSpotlightIndexes = [];
     let spotlightedCounts = JSON.parse(localStorage.getItem("spotLightedCounts"));
     // let chooseFrom = [];
     let randomBusiness;
-
+    let chooseFrom = [];
     for (i = 0; i < spotlightSpots; i++) {
         let min = Math.min(...spotlightedCounts)
-        let chooseFrom = [];
+        chooseFrom = [];
         for (j = 0; j < spotlightedCounts.length; j++) {
             if (spotlightedCounts[j] == min) {
-                chooseFrom.push(j);
+                if (threeToSpotlightIndexes.indexOf(j) == -1) {
+                    chooseFrom.push(j);
+                }
             }
         }
-        randomBusiness = chooseFrom[Math.floor(Math.random()*(chooseFrom.length - 1))];
-        threeToSpotlight[i] = businessesArray[randomBusiness];
-        console.log(randomBusiness);
+        randomBusiness = chooseFrom[Math.floor(Math.random()*(chooseFrom.length))];
+        threeToSpotlightIndexes[i] = randomBusiness;
+        // console.log(businessesToHighlight);
+        // console.log(spotlightedCounts);
+        // console.log(threeToSpotlight);
+        // console.log(chooseFrom);
+        // console.log(i);
+        // console.log(j);
         spotlightedCounts[randomBusiness] += 1;
-        localStorage.setItem("businessesArray", JSON.stringify(businessesArray));
-        localStorage.setItem("businessesToHighlight", JSON.stringify(businessesToHighlight));
         localStorage.setItem("spotLightedCounts", JSON.stringify(spotlightedCounts));
     }
-    // console.log(spotlightedCountArray);
-    // console.log(threeToSpotlight);
+    threeToSpotlightIndexes.forEach((index) => {
+        threeToSpotlight.push(businessesToHighlight[index])
+    })
+    buildSpotlightCards(threeToSpotlight);
 }
 
 async function apiFetch() {
@@ -46,4 +76,4 @@ async function apiFetch() {
     }
 }
 
-randomizeBusinesses();
+apiFetch();
