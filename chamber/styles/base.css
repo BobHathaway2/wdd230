@@ -20,8 +20,8 @@ body {
 
 header {
   display: grid;
-  grid-template-columns: 4rem auto 2.5rem;
-  grid-template-rows: 2.5rem auto 1rem;
+  grid-template-columns: 80px auto 50px;
+  grid-template-rows: 2.5rem auto auto;
   height: 5rem;
   background-color: #03045e;
 }
@@ -32,7 +32,7 @@ header img {
 	grid-column: 1/2;
 }
 
-h1 {
+#test1 {
 	color: white;
 	grid-row: 1/2;
 	grid-column: 2/3;
@@ -40,7 +40,7 @@ h1 {
 	margin: 0;
 	font-size: 10vw;
 }
-h2 {	
+#test2 {	
 	color: white;
 	grid-row: 2/3;
 	grid-column: 2/3;
@@ -62,7 +62,9 @@ header button {
 	position: absolute;
 	top: 0;
 	right: 0;
-	margin: 2px;
+	margin: 0;
+	border: 0;
+	padding: 4px;
 }
 header button::before {
 	content: "\2630"
@@ -73,10 +75,6 @@ header button.open::before {
 }
 nav {
 	display: none;
-	position: absolute;
-	top: 60px;
-	right: 0;
-	z-index: 10;
 }
 nav.open {
 	display: block;
