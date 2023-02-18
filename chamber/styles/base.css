@@ -7,8 +7,6 @@
 	--border: black;
 	--borderlight: grey;
 	--shadow: grey;
-  	--redx: "\2715";
-  	--hamburger: "\2630";
   	--alert: red;
   	--bord: 1px solid black;
 	--zebra: lightgrey;
@@ -90,7 +88,8 @@ nav ul {
 	/* border: 1px solid black; */
 	box-shadow: 0 0 1rem white;
 	border-radius: 5px;
-	opacity: 0.75;}
+	opacity: 0.90;
+}
 	
 nav li {
 	list-style: none;
@@ -382,7 +381,7 @@ table ul {
 }
 
 #list, #grid {
-	background: var(--borderlight);
+	background: var(--backgrounddark);
 	color: var(--fontlight);
 }
 
