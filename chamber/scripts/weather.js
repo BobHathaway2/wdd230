@@ -3,7 +3,7 @@ const myAppId = "606d616f01a6a87fef728d7258b2b35f";
 const tlat = "40.53027036721598";
 const tlon = "-112.29888255735193";
 const gmtOffset = 7;
-const url = `//api.openweathermap.org/data/2.5/forecast?lat=${tlat}&lon=${tlon}&appid=${myAppId}&units=imperial`
+const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${tlat}&lon=${tlon}&appid=${myAppId}&units=imperial`
 
 
 
@@ -26,7 +26,6 @@ function displayWeather(data) {
             dayOfWeek.classList.add('day-of-week');
             const description = document.createElement("p");
             const wxIcon = document.createElement("img");
-            
             let desc = data.list[i].weather[0].description;
             if (i == 0) {
                 dayOfWeek.innerText = `Current:`;
@@ -34,6 +33,8 @@ function displayWeather(data) {
                 dayOfWeek.innerText = `${days[forecastDay]}:`
             }
             wxIcon.setAttribute('src', iconsrc);
+            wxIcon.setAttribute('height', '50')
+            wxIcon.setAttribute('width', '50')
             wxIcon.setAttribute('alt', desc);
             description.innerHTML = `${desc} and ${data.list[i].main.temp}&deg;F`;
             weatherSection.appendChild(wxIcon); 

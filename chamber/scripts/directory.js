@@ -41,7 +41,8 @@ async function apiFetch() {
         portrait.setAttribute("src", business.image);
         portrait.setAttribute("alt", `${business.name} icon`);
         portrait.setAttribute("loading", "lazy");
-        portrait.setAttribute("height", "180");    
+        portrait.setAttribute("height", "180");  
+        portrait.setAttribute("width", "400");  
         card.appendChild(name);
         card.appendChild(portraitDiv);
         portraitDiv.appendChild(portrait);
